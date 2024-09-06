@@ -1,7 +1,10 @@
+//Fri Sep 06 2024 05:35:44 GMT+0000 (Coordinated Universal Time)
+//Base:https://github.com/echo094/decode-js
+//Modify:https://github.com/smallfawn/decode_action
 //Fri Sep 06 2024 05:08:59 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
-const _0x40bf46 = _0x35a552("携程旅行"),
+const _0x40bf46 = _0x35a552("\u643A\u7A0B\u65C5\u884C"),
   _0x5d84ef = require("got"),
   {
     CookieJar: _0xdaebf0
@@ -19,21 +22,21 @@ const _0x5cd32e = 20000,
   _0x189447 = ["APP", "miniProgram", "H5"],
   _0x270b92 = ["1", "2", "3", "4"],
   _0x5bb6d4 = {
-    "签到页": "2H3294O46M",
-    "社区任务": "1708486BXC",
-    "现金任务": "JR442JH832",
-    "周周乐": "6733N074D4",
-    "程程聚财": "IZ85A44O91",
-    "YO票中心1": "893MX06DQ9",
-    "YO票中心2": "3430YX062C",
-    "福利任务": "BZ1WXEE74T"
+    "\u7B7E\u5230\u9875": "2H3294O46M",
+    "\u793E\u533A\u4EFB\u52A1": "1708486BXC",
+    "\u73B0\u91D1\u4EFB\u52A1": "JR442JH832",
+    "\u5468\u5468\u4E50": "6733N074D4",
+    "\u7A0B\u7A0B\u805A\u8D22": "IZ85A44O91",
+    "YO\u7968\u4E2D\u5FC31": "893MX06DQ9",
+    "YO\u7968\u4E2D\u5FC32": "3430YX062C",
+    "\u798F\u5229\u4EFB\u52A1": "BZ1WXEE74T"
   };
 const _0x3be3a9 = {
-  "签到打卡": "MKT_SIGN_1677748235121",
-  "周周乐": "MKT_LOTTERY_1616744889859"
+  "\u7B7E\u5230\u6253\u5361": "MKT_SIGN_1677748235121",
+  "\u5468\u5468\u4E50": "MKT_LOTTERY_1616744889859"
 };
 const _0x3e7062 = {
-  "YO票签到": "893MX06DQ9"
+  "YO\u7968\u7B7E\u5230": "893MX06DQ9"
 };
 class _0xf154c1 {
   constructor() {
@@ -58,7 +61,7 @@ class _0xf154c1 {
     var _0x544435 = "",
       _0x3ed491 = _0x40bf46.userCount.toString().length;
     if (this.index) {
-      _0x544435 += "账号[" + _0x40bf46.padStr(this.index, _0x3ed491) + "]";
+      _0x544435 += "\u8D26\u53F7[" + _0x40bf46.padStr(this.index, _0x3ed491) + "]";
     }
     if (this.name) {
       _0x544435 += "[" + this.name + "]";
@@ -119,25 +122,25 @@ class _0xf154c1 {
           if (_0x5adb7a || _0x599239.includes(_0x3a0b15?.["name"])) {
             let _0x17b05a = "";
             _0x3a0b15?.["code"] && (_0x17b05a += "(" + _0x3a0b15.code, _0x3a0b15?.["event"] && (_0x17b05a += ":" + _0x3a0b15.event), _0x17b05a += ")");
-            this.log("[" + _0x2303da + "]请求超时" + _0x17b05a + "(" + _0x206b57 + "ms)，重试第" + _0x13894c + "次");
+            this.log("[" + _0x2303da + "]\u8BF7\u6C42\u8D85\u65F6" + _0x17b05a + "(" + _0x206b57 + "ms)\uFF0C\u91CD\u8BD5\u7B2C" + _0x13894c + "\u6B21");
           } else {
             if (_0x40136b.includes(_0x3a0b15?.["name"])) {
-              this.log("[" + _0x2303da + "]请求错误(" + _0x3a0b15.code + ")(" + _0x206b57 + "ms)，重试第" + _0x13894c + "次");
+              this.log("[" + _0x2303da + "]\u8BF7\u6C42\u9519\u8BEF(" + _0x3a0b15.code + ")(" + _0x206b57 + "ms)\uFF0C\u91CD\u8BD5\u7B2C" + _0x13894c + "\u6B21");
             } else {
               if (_0x3ff5d5) {
-                _0x3a0b15 && !_0x5c9906.includes(_0x3ff5d5) && this.log("请求[" + _0x2303da + "]返回[" + _0x3ff5d5 + "]");
+                _0x3a0b15 && !_0x5c9906.includes(_0x3ff5d5) && this.log("\u8BF7\u6C42[" + _0x2303da + "]\u8FD4\u56DE[" + _0x3ff5d5 + "]");
               } else {
                 let {
                   code = "unknown",
                   name = "unknown"
                 } = _0x3a0b15 || {};
-                this.log("请求[" + _0x2303da + "]错误[" + code + "][" + name + "]");
+                this.log("\u8BF7\u6C42[" + _0x2303da + "]\u9519\u8BEF[" + code + "][" + name + "]");
               }
               break;
             }
           }
         } catch (_0xe3c3ab) {
-          this.log("[" + _0x2303da + "]请求错误(" + _0xe3c3ab.message + ")，重试第" + _0x13894c + "次");
+          this.log("[" + _0x2303da + "]\u8BF7\u6C42\u9519\u8BEF(" + _0xe3c3ab.message + ")\uFF0C\u91CD\u8BD5\u7B2C" + _0x13894c + "\u6B21");
         }
       }
       if (_0xbe8d70 === null || _0xbe8d70 === undefined) {
@@ -252,11 +255,11 @@ class _0x31f48a extends _0xf154c1 {
           mobilePhone: _0x192619
         } = _0x533a41?.["thisUserInfo"];
         this.name = _0x192619 || _0x533a41?.["uID"] || _0x29f9ec;
-        this.log("登陆成功");
+        this.log("\u767B\u9646\u6210\u529F");
         _0x42cc0e = true;
       } else {
         let _0x4c0d37 = _0x40bf46.get(_0x533a41?.["result"], "errMessage", "");
-        this.log("获取账号信息失败[" + _0x5e0522 + "]: " + _0x4c0d37);
+        this.log("\u83B7\u53D6\u8D26\u53F7\u4FE1\u606F\u5931\u8D25[" + _0x5e0522 + "]: " + _0x4c0d37);
       }
     } catch (_0x35c716) {
       console.log(_0x35c716);
@@ -285,11 +288,11 @@ class _0x31f48a extends _0xf154c1 {
         } = _0x38e326?.["userInfo"];
         this.uid = _0x1a3953;
         this.name = _0x1f17ce;
-        this.log("登陆成功");
+        this.log("\u767B\u9646\u6210\u529F");
         _0x4811c3 = true;
       } else {
         let _0x231040 = _0x40bf46.get(_0x38e326, "resultMsg", "");
-        this.log("获取账号信息失败[" + _0x3aec8b + "]: " + _0x231040);
+        this.log("\u83B7\u53D6\u8D26\u53F7\u4FE1\u606F\u5931\u8D25[" + _0x3aec8b + "]: " + _0x231040);
       }
     } catch (_0x47d444) {
       console.log(_0x47d444);
@@ -312,10 +315,10 @@ class _0x31f48a extends _0xf154c1 {
         _0x14a340 = _0x40bf46.get(_0x105761, "code", _0x1a7639);
       if (_0x14a340 === 0) {
         let _0x202ad5 = _0x105761.sign;
-        _0x202ad5 ? this.log("[积分签到]今天已签到") : await this.signToday();
+        _0x202ad5 ? this.log("[\u79EF\u5206\u7B7E\u5230]\u4ECA\u5929\u5DF2\u7B7E\u5230") : await this.signToday();
       } else {
         let _0x94475c = _0x40bf46.get(_0x105761, "message", "");
-        this.log("查询[积分签到]签到失败[" + _0x14a340 + "]: " + _0x94475c);
+        this.log("\u67E5\u8BE2[\u79EF\u5206\u7B7E\u5230]\u7B7E\u5230\u5931\u8D25[" + _0x14a340 + "]: " + _0x94475c);
       }
     } catch (_0x4b9524) {
       console.log(_0x4b9524);
@@ -335,10 +338,10 @@ class _0x31f48a extends _0xf154c1 {
         } = await this.request(_0x44d7d5),
         _0x8a32f3 = _0x40bf46.get(_0x476a0b, "code", _0x1a3543);
       if (_0x8a32f3 === 0) {
-        this.log("[积分签到]签到成功: " + _0x476a0b.baseIntegratedPoint + "积分, 已连签" + _0x476a0b.continueDay + "天");
+        this.log("[\u79EF\u5206\u7B7E\u5230]\u7B7E\u5230\u6210\u529F: " + _0x476a0b.baseIntegratedPoint + "\u79EF\u5206, \u5DF2\u8FDE\u7B7E" + _0x476a0b.continueDay + "\u5929");
       } else {
         let _0x4085c3 = _0x40bf46.get(_0x476a0b, "message", "");
-        this.log("[积分签到]签到失败[" + _0x8a32f3 + "]: " + _0x4085c3);
+        this.log("[\u79EF\u5206\u7B7E\u5230]\u7B7E\u5230\u5931\u8D25[" + _0x8a32f3 + "]: " + _0x4085c3);
         this.can_sign = false;
       }
     } catch (_0x38ff8b) {
@@ -369,10 +372,10 @@ class _0x31f48a extends _0xf154c1 {
         _0x5a67d2 = _0x40bf46.get(_0x175531, "code", _0x37a010);
       if (_0x5a67d2 === 0) {
         let _0x3e5ba1 = _0x175531.isSign;
-        _0x3e5ba1 ? this.log("[" + _0x4d09ff + "]今天已签到") : await this.do_sign(_0x4d09ff);
+        _0x3e5ba1 ? this.log("[" + _0x4d09ff + "]\u4ECA\u5929\u5DF2\u7B7E\u5230") : await this.do_sign(_0x4d09ff);
       } else {
         let _0x26eb32 = _0x40bf46.get(_0x175531, "message", "");
-        this.log("查询[" + _0x4d09ff + "]签到失败[" + _0x5a67d2 + "]: " + _0x26eb32);
+        this.log("\u67E5\u8BE2[" + _0x4d09ff + "]\u7B7E\u5230\u5931\u8D25[" + _0x5a67d2 + "]: " + _0x26eb32);
       }
     } catch (_0x4e9130) {
       console.log(_0x4e9130);
@@ -401,10 +404,10 @@ class _0x31f48a extends _0xf154c1 {
         } = await this.request(_0x51779c),
         _0x354f75 = _0x40bf46.get(_0xaed788, "code", _0x3eaded);
       if (_0x354f75 === 0) {
-        this.log("[" + _0x28440a + "]签到成功: " + _0xaed788.awardDesc);
+        this.log("[" + _0x28440a + "]\u7B7E\u5230\u6210\u529F: " + _0xaed788.awardDesc);
       } else {
         let _0xa5d0b8 = _0x40bf46.get(_0xaed788, "message", "");
-        this.log("[" + _0x28440a + "]签到失败[" + _0x354f75 + "]: " + _0xa5d0b8);
+        this.log("[" + _0x28440a + "]\u7B7E\u5230\u5931\u8D25[" + _0x354f75 + "]: " + _0xa5d0b8);
       }
     } catch (_0x2cc2e4) {
       console.log(_0x2cc2e4);
@@ -417,7 +420,7 @@ class _0x31f48a extends _0xf154c1 {
           method: "post",
           url: "https://m.ctrip.com/restapi/soa2/14347/carveUpPointsGetActivityInfo",
           json: {
-            activityId: _0x3be3a9["签到打卡"],
+            activityId: _0x3be3a9["\u7B7E\u5230\u6253\u5361"],
             ...this.get_common_body()
           }
         },
@@ -428,10 +431,10 @@ class _0x31f48a extends _0xf154c1 {
         _0x595a06 = _0x40bf46.get(_0x5afa2b, "errCode", _0x37e659);
       if (_0x595a06 === 0) {
         let _0x42a1d4 = _0x5afa2b?.["result"]?.["haveBet"];
-        _0x42a1d4 ? this.log("已投注参与明天签到打卡") : this.can_sign ? await this.carveUpPointsBet() : this.log("签到失败了, 不投注打卡");
+        _0x42a1d4 ? this.log("\u5DF2\u6295\u6CE8\u53C2\u4E0E\u660E\u5929\u7B7E\u5230\u6253\u5361") : this.can_sign ? await this.carveUpPointsBet() : this.log("\u7B7E\u5230\u5931\u8D25\u4E86, \u4E0D\u6295\u6CE8\u6253\u5361");
       } else {
         let _0x575ee5 = _0x40bf46.get(_0x5afa2b, "errMsg", "");
-        this.log("查询投注签到打卡状态失败[" + _0x595a06 + "]: " + _0x575ee5);
+        this.log("\u67E5\u8BE2\u6295\u6CE8\u7B7E\u5230\u6253\u5361\u72B6\u6001\u5931\u8D25[" + _0x595a06 + "]: " + _0x575ee5);
       }
     } catch (_0x17dbe4) {
       console.log(_0x17dbe4);
@@ -454,10 +457,10 @@ class _0x31f48a extends _0xf154c1 {
         } = await this.request(_0x4ff5dc),
         _0x37104a = _0x40bf46.get(_0x3e858b, "errCode", _0x3a160b);
       if (_0x37104a === 0) {
-        this.log("投注参与明天签到打卡成功");
+        this.log("\u6295\u6CE8\u53C2\u4E0E\u660E\u5929\u7B7E\u5230\u6253\u5361\u6210\u529F");
       } else {
         let _0x38e064 = _0x40bf46.get(_0x3e858b, "errMsg", "");
-        this.log("投注参与明天签到打卡失败[" + _0x37104a + "]: " + _0x38e064);
+        this.log("\u6295\u6CE8\u53C2\u4E0E\u660E\u5929\u7B7E\u5230\u6253\u5361\u5931\u8D25[" + _0x37104a + "]: " + _0x38e064);
       }
     } catch (_0x238824) {
       console.log(_0x238824);
@@ -499,35 +502,35 @@ class _0x31f48a extends _0xf154c1 {
           if (_0x419d85.map(_0xcce8f0 => _0xcce8f0.id).includes(_0x16f640.id)) {
             continue;
           }
-          let _0x15567e = "未知状态" + _0x16f640.status;
+          let _0x15567e = "\u672A\u77E5\u72B6\u6001" + _0x16f640.status;
           switch (_0x16f640.status) {
             case 0:
               {
-                _0x15567e = "未接受";
+                _0x15567e = "\u672A\u63A5\u53D7";
                 break;
               }
             case 1:
               {
-                _0x15567e = "未完成";
+                _0x15567e = "\u672A\u5B8C\u6210";
                 break;
               }
             case 2:
               {
-                _0x15567e = "可领取奖励";
+                _0x15567e = "\u53EF\u9886\u53D6\u5956\u52B1";
                 break;
               }
             case 3:
               {
-                _0x15567e = "已领取奖励";
+                _0x15567e = "\u5DF2\u9886\u53D6\u5956\u52B1";
                 break;
               }
           }
           _0x419d85.push(_0x16f640);
-          this.log("任务[" + _0x16f640.displayName + "]" + _0x15567e);
+          this.log("\u4EFB\u52A1[" + _0x16f640.displayName + "]" + _0x15567e);
         }
       } else {
         let _0x54f2e3 = _0x40bf46.get(_0xf9112a, "message", "");
-        this.log("查询[" + _0x4575a0 + "][platform:" + _0x2b071d + "][version:" + _0x280d36 + "]任务失败[" + _0x188ac7 + "]: " + _0x54f2e3);
+        this.log("\u67E5\u8BE2[" + _0x4575a0 + "][platform:" + _0x2b071d + "][version:" + _0x280d36 + "]\u4EFB\u52A1\u5931\u8D25[" + _0x188ac7 + "]: " + _0x54f2e3);
       }
     } catch (_0x5af573) {
       console.log(_0x5af573);
@@ -537,7 +540,7 @@ class _0x31f48a extends _0xf154c1 {
     try {
       let _0x58a140 = _0x5bb6d4[_0x12ef38];
       for (let _0xb06216 of _0x204d11) {
-        if (_0xb06216?.["displayName"]?.["includes"]("兑换")) {
+        if (_0xb06216?.["displayName"]?.["includes"]("\u5151\u6362")) {
           continue;
         }
         switch (_0xb06216.status) {
@@ -586,11 +589,11 @@ class _0x31f48a extends _0xf154c1 {
         } = await this.request(_0x19326c),
         _0x2a003b = _0x40bf46.get(_0x30f577, "code", _0x4f7aaf);
       if (_0x2a003b === 200) {
-        this.log("接受任务[" + _0x139002.displayName + "]成功");
+        this.log("\u63A5\u53D7\u4EFB\u52A1[" + _0x139002.displayName + "]\u6210\u529F");
         await this.doTask(_0x3e8d3d, _0x139002);
       } else {
         let _0x41d974 = _0x40bf46.get(_0x30f577, "message", "");
-        this.log("接受任务[" + _0x139002.displayName + "]失败[" + _0x2a003b + "]: " + _0x41d974);
+        this.log("\u63A5\u53D7\u4EFB\u52A1[" + _0x139002.displayName + "]\u5931\u8D25[" + _0x2a003b + "]: " + _0x41d974);
       }
     } catch (_0x5ba529) {
       console.log(_0x5ba529);
@@ -624,7 +627,7 @@ class _0x31f48a extends _0xf154c1 {
                 }
               default:
                 {
-                  this.log("任务[" + _0x280eb7.displayName + "]: 未支持的[BU_ACTIVITY]类型[" + _0x28a75d?.["buActivityType"] + "]");
+                  this.log("\u4EFB\u52A1[" + _0x280eb7.displayName + "]: \u672A\u652F\u6301\u7684[BU_ACTIVITY]\u7C7B\u578B[" + _0x28a75d?.["buActivityType"] + "]");
                   break;
                 }
             }
@@ -648,7 +651,7 @@ class _0x31f48a extends _0xf154c1 {
         case "JOIN_ACTIVITY_TASK":
         case "APP_ACTIVITY_WX_DRAINAGE":
           {
-            this.log("任务[" + _0x280eb7.displayName + "]: 未支持的类型[" + _0x280eb7.eventType + "]");
+            this.log("\u4EFB\u52A1[" + _0x280eb7.displayName + "]: \u672A\u652F\u6301\u7684\u7C7B\u578B[" + _0x280eb7.eventType + "]");
             break;
           }
         default:
@@ -681,11 +684,11 @@ class _0x31f48a extends _0xf154c1 {
         } = await this.request(_0x42c91a),
         _0x136852 = _0x40bf46.get(_0x5650b4, "code", _0x54cc27);
       if (_0x136852 === 200) {
-        this.log("完成任务[" + _0x22f4f7.displayName + "]成功");
+        this.log("\u5B8C\u6210\u4EFB\u52A1[" + _0x22f4f7.displayName + "]\u6210\u529F");
         await this.awardTask(_0x2c4314, _0x22f4f7, _0xaf8bf9);
       } else {
         let _0x474330 = _0x40bf46.get(_0x5650b4, "message", "");
-        this.log("完成任务[" + _0x22f4f7.displayName + "][" + _0x22f4f7.eventType + "]失败[" + _0x136852 + "]: " + _0x474330);
+        this.log("\u5B8C\u6210\u4EFB\u52A1[" + _0x22f4f7.displayName + "][" + _0x22f4f7.eventType + "]\u5931\u8D25[" + _0x136852 + "]: " + _0x474330);
       }
     } catch (_0xaaf5b6) {
       console.log(_0xaaf5b6);
@@ -709,10 +712,10 @@ class _0x31f48a extends _0xf154c1 {
         } = await this.request(_0x1382e7),
         _0x5c0d3c = _0x40bf46.get(_0x185128, "code", _0x4c66cd);
       if (_0x5c0d3c === 200) {
-        this.log("领取任务[" + _0x30ec70.displayName + "]奖励: " + _0x185128?.["awardDesc"]);
+        this.log("\u9886\u53D6\u4EFB\u52A1[" + _0x30ec70.displayName + "]\u5956\u52B1: " + _0x185128?.["awardDesc"]);
       } else {
         let _0x3eb92a = _0x40bf46.get(_0x185128, "message", "");
-        this.log("领取任务[" + _0x30ec70.displayName + "]奖励失败[" + _0x5c0d3c + "]: " + _0x3eb92a);
+        this.log("\u9886\u53D6\u4EFB\u52A1[" + _0x30ec70.displayName + "]\u5956\u52B1\u5931\u8D25[" + _0x5c0d3c + "]: " + _0x3eb92a);
       }
     } catch (_0x284095) {
       console.log(_0x284095);
@@ -736,11 +739,11 @@ class _0x31f48a extends _0xf154c1 {
         } = await this.request(_0xe329b9),
         _0x532e43 = _0x40bf46.get(_0x2f6202, "code", _0x118a8d);
       if (_0x532e43 === 200) {
-        this.log("完成任务[" + _0x325059.displayName + "]成功");
+        this.log("\u5B8C\u6210\u4EFB\u52A1[" + _0x325059.displayName + "]\u6210\u529F");
         await this.awardTask(_0xd5c933, _0x325059, _0xe81e1a);
       } else {
         let _0x3103fd = _0x40bf46.get(_0x2f6202, "message", "");
-        this.log("完成任务[" + _0x325059.displayName + "]失败[" + _0x532e43 + "]: " + _0x3103fd);
+        this.log("\u5B8C\u6210\u4EFB\u52A1[" + _0x325059.displayName + "]\u5931\u8D25[" + _0x532e43 + "]: " + _0x3103fd);
       }
     } catch (_0x8079e2) {
       console.log(_0x8079e2);
@@ -765,11 +768,11 @@ class _0x31f48a extends _0xf154c1 {
         } = await this.request(_0x5d7e69),
         _0x40a12e = _0x40bf46.get(_0x587c58, "code", _0x2c13d7);
       if (_0x40a12e === 200) {
-        this.log("完成任务[" + _0x51cd63.displayName + "]成功");
+        this.log("\u5B8C\u6210\u4EFB\u52A1[" + _0x51cd63.displayName + "]\u6210\u529F");
         await this.awardTask(_0x4e5910, _0x51cd63, _0x1f7480);
       } else {
         let _0x564705 = _0x40bf46.get(_0x587c58, "message", "");
-        this.log("完成任务[" + _0x51cd63.displayName + "]失败[" + _0x40a12e + "]: " + _0x564705);
+        this.log("\u5B8C\u6210\u4EFB\u52A1[" + _0x51cd63.displayName + "]\u5931\u8D25[" + _0x40a12e + "]: " + _0x564705);
       }
     } catch (_0x3dd155) {
       console.log(_0x3dd155);
@@ -792,7 +795,7 @@ class _0x31f48a extends _0xf154c1 {
           result: _0x5d5fc2,
           statusCode: _0x4d9dc2
         } = await this.request(_0x511642);
-      _0x5d5fc2?.["result"]?.["result"] ? this.log("星球任务点赞[" + _0x3a8700 + "]成功") : this.log("星球任务点赞[" + _0x3a8700 + "]失败");
+      _0x5d5fc2?.["result"]?.["result"] ? this.log("\u661F\u7403\u4EFB\u52A1\u70B9\u8D5E[" + _0x3a8700 + "]\u6210\u529F") : this.log("\u661F\u7403\u4EFB\u52A1\u70B9\u8D5E[" + _0x3a8700 + "]\u5931\u8D25");
     } catch (_0x493fcf) {
       console.log(_0x493fcf);
     }
@@ -852,7 +855,7 @@ class _0x31f48a extends _0xf154c1 {
         }
         await this.awardTask(_0x56b868, _0x425263, _0x472622);
       } else {
-        this.log("获取星球点赞文章失败");
+        this.log("\u83B7\u53D6\u661F\u7403\u70B9\u8D5E\u6587\u7AE0\u5931\u8D25");
       }
     } catch (_0x8ce79a) {
       console.log(_0x8ce79a);
@@ -881,7 +884,7 @@ class _0x31f48a extends _0xf154c1 {
         _0x4de29e = _0x598955?.["activityList"] || [];
       } else {
         let _0x562055 = _0x40bf46.get(_0x598955, "errmsg", "");
-        this.log("获取YO票夺宝列表失败[" + _0xad733f + "]: " + _0x562055);
+        this.log("\u83B7\u53D6YO\u7968\u593A\u5B9D\u5217\u8868\u5931\u8D25[" + _0xad733f + "]: " + _0x562055);
       }
     } catch (_0xddf07f) {
       console.log(_0xddf07f);
@@ -912,11 +915,11 @@ class _0x31f48a extends _0xf154c1 {
         } = await this.request(_0x33923a),
         _0x4d78a7 = _0x40bf46.get(_0x1a9621, "errcode", _0x1d2c03);
       if (_0x4d78a7 === 0) {
-        this.log("投票夺宝[" + _0x3d83ba.activityName + "]成功: " + _0x559c45.join(","));
+        this.log("\u6295\u7968\u593A\u5B9D[" + _0x3d83ba.activityName + "]\u6210\u529F: " + _0x559c45.join(","));
         _0x1cb14e = true;
       } else {
         let _0x317ff7 = _0x40bf46.get(_0x1a9621, "errmsg", "");
-        this.log("投票夺宝[" + _0x3d83ba.activityName + "]失败[" + _0x4d78a7 + "]: " + _0x317ff7);
+        this.log("\u6295\u7968\u593A\u5B9D[" + _0x3d83ba.activityName + "]\u5931\u8D25[" + _0x4d78a7 + "]: " + _0x317ff7);
       }
     } catch (_0x610e0b) {
       console.log(_0x610e0b);
@@ -931,7 +934,7 @@ class _0x31f48a extends _0xf154c1 {
           method: "post",
           url: "https://m.ctrip.com/restapi/soa2/16575/getZzlUserCard",
           json: {
-            activityId: _0x3be3a9["周周乐"],
+            activityId: _0x3be3a9["\u5468\u5468\u4E50"],
             periodNum: "",
             pageNo: 1,
             pageSize: 100,
@@ -947,13 +950,13 @@ class _0x31f48a extends _0xf154c1 {
         let {
           chanceNum: _0x134070
         } = _0x254322;
-        this.log("周周乐可以抽卡" + _0x134070 + "次");
+        this.log("\u5468\u5468\u4E50\u53EF\u4EE5\u62BD\u5361" + _0x134070 + "\u6B21");
         while (_0x134070-- > 0) {
           await this.sendZzlCardToUser();
         }
       } else {
         let _0x5690e5 = _0x40bf46.get(_0x254322, "resultmessage", "");
-        this.log("查询周周乐抽卡次数失败[" + _0x31d01b + "]: " + _0x5690e5);
+        this.log("\u67E5\u8BE2\u5468\u5468\u4E50\u62BD\u5361\u6B21\u6570\u5931\u8D25[" + _0x31d01b + "]: " + _0x5690e5);
       }
     } catch (_0x318b37) {
       console.log(_0x318b37);
@@ -977,10 +980,10 @@ class _0x31f48a extends _0xf154c1 {
         } = await this.request(_0x10717d),
         _0x178948 = _0x40bf46.get(_0x553975, "errCode", _0x3d08f0);
       if (_0x178948 === 0) {
-        this.log("周周乐抽卡成功");
+        this.log("\u5468\u5468\u4E50\u62BD\u5361\u6210\u529F");
       } else {
         let _0x58cc01 = _0x40bf46.get(_0x553975, "resultmessage", "");
-        this.log("周周乐抽卡失败[" + _0x178948 + "]: " + _0x58cc01);
+        this.log("\u5468\u5468\u4E50\u62BD\u5361\u5931\u8D25[" + _0x178948 + "]: " + _0x58cc01);
       }
     } catch (_0x30d049) {
       console.log(_0x30d049);
@@ -1006,10 +1009,10 @@ class _0x31f48a extends _0xf154c1 {
         const _0xe9c2d6 = {
           notify: true
         };
-        this.log("积分: " + _0x30c502, _0xe9c2d6);
+        this.log("\u79EF\u5206: " + _0x30c502, _0xe9c2d6);
       } else {
         let _0x64c39e = _0x40bf46.get(_0x484365, "resultmessage", "");
-        this.log("查询积分失败[" + _0x599bf3 + "]: " + _0x64c39e);
+        this.log("\u67E5\u8BE2\u79EF\u5206\u5931\u8D25[" + _0x599bf3 + "]: " + _0x64c39e);
       }
     } catch (_0x45f222) {
       console.log(_0x45f222);
@@ -1017,7 +1020,7 @@ class _0x31f48a extends _0xf154c1 {
   }
   async get_task(_0xc2fc93, _0x543496 = {}) {
     _0x40bf46.log("\n--------------------------------");
-    this.log("---> 查询[" + _0xc2fc93 + "]任务");
+    this.log("---> \u67E5\u8BE2[" + _0xc2fc93 + "]\u4EFB\u52A1");
     let _0x578324 = [];
     for (let _0x141e37 of _0x189447) {
       for (let _0x4fa09f of _0x270b92) {
@@ -1025,10 +1028,10 @@ class _0x31f48a extends _0xf154c1 {
       }
     }
     let _0x3efead = _0x578324?.["filter"](_0x3db341 => _0x3db341.status < 3)?.["length"] || 0;
-    _0x3efead > 0 && (this.log("---> 开始做[" + _0xc2fc93 + "]任务"), await this.process_tasklist(_0xc2fc93, _0x578324));
+    _0x3efead > 0 && (this.log("---> \u5F00\u59CB\u505A[" + _0xc2fc93 + "]\u4EFB\u52A1"), await this.process_tasklist(_0xc2fc93, _0x578324));
   }
   async userTask(_0x17b3ee = {}) {
-    _0x40bf46.log("\n-------------- 账号[" + this.index + "] --------------");
+    _0x40bf46.log("\n-------------- \u8D26\u53F7[" + this.index + "] --------------");
     if (!(await this.getUserInfo())) {
       return;
     }
@@ -1040,9 +1043,9 @@ class _0x31f48a extends _0xf154c1 {
     for (let _0x129ead of Object.keys(_0x5bb6d4)) {
       await this.get_task(_0x129ead);
     }
-    _0x40bf46.log("\n---------------- 周周乐 ---------------");
+    _0x40bf46.log("\n---------------- \u5468\u5468\u4E50 ---------------");
     await this.getZzlUserCard();
-    _0x40bf46.log("\n---------------- 查询推送 ---------------");
+    _0x40bf46.log("\n---------------- \u67E5\u8BE2\u63A8\u9001 ---------------");
     await this.userBaseInfo();
   }
 }
@@ -1083,7 +1086,7 @@ async function _0x23a62a(_0x2e6029 = 0) {
       _0x1a5663?.["commonMsg"] && _0x1a5663.commonMsg.length > 0 && _0x40bf46.log(_0x1a5663.commonMsg.join("\n") + "\n");
       if (_0x1a5663[_0x30e889]) {
         let _0x3fe24e = _0x1a5663[_0x30e889];
-        _0x3fe24e.status == 0 ? _0x4db2c0 >= _0x3fe24e.version ? (_0x16626e = true, _0x40bf46.log(_0x3fe24e.msg[_0x3fe24e.status]), _0x40bf46.log(_0x3fe24e.updateMsg), _0x40bf46.log("现在运行的脚本版本是：" + _0x4db2c0 + "，最新脚本版本：" + _0x3fe24e.latestVersion)) : _0x40bf46.log(_0x3fe24e.versionMsg) : _0x40bf46.log(_0x3fe24e.msg[_0x3fe24e.status]);
+        _0x3fe24e.status == 0 ? _0x4db2c0 >= _0x3fe24e.version ? (_0x16626e = true, _0x40bf46.log(_0x3fe24e.msg[_0x3fe24e.status]), _0x40bf46.log(_0x3fe24e.updateMsg), _0x40bf46.log("\u73B0\u5728\u8FD0\u884C\u7684\u811A\u672C\u7248\u672C\u662F\uFF1A" + _0x4db2c0 + "\uFF0C\u6700\u65B0\u811A\u672C\u7248\u672C\uFF1A" + _0x3fe24e.latestVersion)) : _0x40bf46.log(_0x3fe24e.versionMsg) : _0x40bf46.log(_0x3fe24e.msg[_0x3fe24e.status]);
       } else {
         _0x40bf46.log(_0x1a5663.errorMsg);
       }
@@ -1104,7 +1107,7 @@ function _0x35a552(_0x14eb08) {
       const _0x455a20 = {
         time: true
       };
-      this.log("[" + this.name + "]开始运行\n", _0x455a20);
+      this.log("[" + this.name + "]\u5F00\u59CB\u8FD0\u884C\n", _0x455a20);
       this.notifyStr = [];
       this.notifyFlag = true;
       this.userIdx = 0;
@@ -1156,10 +1159,10 @@ function _0x35a552(_0x14eb08) {
         const _0x569830 = {
           notify: true
         };
-        this.log("未找到变量，请检查变量" + _0x16b47b.map(_0x28e264 => "[" + _0x28e264 + "]").join("或"), _0x569830);
+        this.log("\u672A\u627E\u5230\u53D8\u91CF\uFF0C\u8BF7\u68C0\u67E5\u53D8\u91CF" + _0x16b47b.map(_0x28e264 => "[" + _0x28e264 + "]").join("\u6216"), _0x569830);
         return false;
       }
-      this.log("共找到" + this.userCount + "个账号");
+      this.log("\u5171\u627E\u5230" + this.userCount + "\u4E2A\u8D26\u53F7");
       return true;
     }
     time(_0x21e3d0, _0x371b92 = null) {
@@ -1186,11 +1189,11 @@ function _0x35a552(_0x14eb08) {
       }
       try {
         var _0x134e12 = require("./sendNotify");
-        this.log("\n============== 推送 ==============");
+        this.log("\n============== \u63A8\u9001 ==============");
         await _0x134e12.sendNotify(this.name, this.notifyStr.join("\n"));
       } catch {
         this.log("\n=================================");
-        this.log("读取推送依赖[sendNotify.js]失败, 请检查同目录下是否有依赖");
+        this.log("\u8BFB\u53D6\u63A8\u9001\u4F9D\u8D56[sendNotify.js]\u5931\u8D25, \u8BF7\u68C0\u67E5\u540C\u76EE\u5F55\u4E0B\u662F\u5426\u6709\u4F9D\u8D56");
       }
     }
     padStr(_0x1b1f9b, _0x41022b, _0x585594 = {}) {
@@ -1271,7 +1274,7 @@ function _0x35a552(_0x14eb08) {
       const _0xf798cd = {
         time: true
       };
-      this.log("[" + this.name + "]运行结束，共运行了" + _0x17a15b + "秒", _0xf798cd);
+      this.log("[" + this.name + "]\u8FD0\u884C\u7ED3\u675F\uFF0C\u5171\u8FD0\u884C\u4E86" + _0x17a15b + "\u79D2", _0xf798cd);
       process.exit(0);
     }
     normalize_time(_0x4a4899, _0x25c26a = {}) {
@@ -1306,12 +1309,12 @@ function _0x35a552(_0x14eb08) {
         const _0x5b09bd = {
           time: true
         };
-        _0x364ba4.log("离目标时间[" + _0x491142 + "]大于" + _0x1d638a / 1000 + "秒,不等待", _0x5b09bd);
+        _0x364ba4.log("\u79BB\u76EE\u6807\u65F6\u95F4[" + _0x491142 + "]\u5927\u4E8E" + _0x1d638a / 1000 + "\u79D2,\u4E0D\u7B49\u5F85", _0x5b09bd);
       } else {
         const _0x1c799c = {
           time: true
         };
-        _0x364ba4.log("离目标时间[" + _0x491142 + "]还有" + _0x3c5d8a / 1000 + "秒,开始等待", _0x1c799c);
+        _0x364ba4.log("\u79BB\u76EE\u6807\u65F6\u95F4[" + _0x491142 + "]\u8FD8\u6709" + _0x3c5d8a / 1000 + "\u79D2,\u5F00\u59CB\u7B49\u5F85", _0x1c799c);
         while (_0x3c5d8a > 0) {
           let _0x1ff067 = Math.min(_0x3c5d8a, _0x47173f);
           await this.wait(_0x1ff067);
@@ -1321,7 +1324,7 @@ function _0x35a552(_0x14eb08) {
         const _0x5453cf = {
           time: true
         };
-        _0x364ba4.log("已完成等待", _0x5453cf);
+        _0x364ba4.log("\u5DF2\u5B8C\u6210\u7B49\u5F85", _0x5453cf);
       }
     }
     async wait_gap_interval(_0x51add8, _0x162bf3) {
