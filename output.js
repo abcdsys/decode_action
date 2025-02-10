@@ -1,21 +1,1030 @@
-//Fri Jan 10 2025 07:17:46 GMT+0000 (Coordinated Universal Time)
+//Mon Feb 10 2025 01:25:13 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
-/**
- * @author 南下风来
- * @name nxfl-ql
- * @team 南下风来
- * @version 1.0.6
- * @description 青龙面板环境变量管理，重构后新增大量自定义，请前往web查看,插件收费咯~2元/月
- * @rule ^(上传变量|删除变量)$
- * @parallel true 
- * // 并行-匹配规则与spy相同的时候可以打开.把//改成@
- * @admin false
- * @public false
- * @priority 999999
- * // 是否服务模块，true不会作为插件加载，会在系统启动时执行该插件内容
- * @service false
- * @classification ["工具"]
- */
-
-/** Code Encryption Block[419fd178b7a37c9eae7b7426c4a0420334ae64299ed4c3cfb6106454c5826c67bab4872975af50be7a7909f3378e5edcecf776ab112a81108c9416b375b6e94fe710a50feea9d97416bb12ff0adaa232b5dd1fc84b03c920e887acae6f8950c8355dbfeda8030c0f76b3876cb485dc49e9c96a44952cecd93d6136f000af3a588730fd37eb29db938dbc2d17196a308d09aea76570d9ea093a47d922bdbc4ab60d1fd380664a73e4ca54d7ac57fa164656b31500f00ef0a90703812f0728f5558a8d4d450d0e13d0789f1d81dee9eab272e8aede50da60057a6f3c3247cdd1b29a502c67b0673f1c94c2b82b0f86ed913ae872287082a2ea8b5f5c91124b9cb8e98ef8af8405ab5747f524664a869d482598725cf71e7ee671941d428f8b6f19daf052f1938abc8ea874bc84a35f600eebd1ef6cbce109e204853cf04044895fc6785055e6b3660ed204ad2b3e5dc34598f607a73a5945f7c48ee8b875c37e55282c683642c848a6ff5c166d248bb949092075daf85e750dd73e2c268c5b17625e79aa552ad41d751a4d5f88922278c9767d424e7a8a8ba318438387be2fe455286cf424e05d5981ac24cb49df330525adffa31cbcd0b9ec669a02ab59b925a3053079702f3a1a8460d78fa73db2da72d96538f44c8bf5bbf672e413494f1afd71f1f29d6123431a97a03e5abc966f0d260b19cea6ff345e9b0fb0c1710791d58bebe19f3188afbca424a45d291fb30d59a9b57eb29c9ca70d35cf266b416d8d3bd13e0e50d7a4f14c517b905a3b75ad392badcc9d252224c7236f892255c54f23f44cb9006dba009905b41740af13e32feb4a1f65f29ba76394449ace5816e827d4c25010adc2965a06f153466c53643b12260425f784663c905773ac6381832034d4503b9739965e21d5c835b0bf11585833fe19e588562879869c135174ef30a554fe946aea9abea37c5461326621c7398ef8d171a118e21d687c74abed77852be828c9b5d44b585202026d8ab6a02c9a9b356de4d39024d50229e92c409ea6a5287564cf45ae36e8e2d72433b4016aa8f02a80e77edf76cb5e7e1c482bb104a326e478b7dd1c96f03ec72c0bee5ab17a20090f689e7f24843e049ab1dbbf50d58fb418ef634749f21b2c4681be63934fb8f6bef7e3a1cd3482f5430c25af352fbfb193e0fbaddb68dcd053e6d968dcb75841e29e4193335f7642649acdfb513259a6c16ce9261d06cc6af0f1bd741ef21fc440014dd0ff45b728bf345b247f8c7c16d4eddc6075daf3770f8af3a982c323b69f324dcf5e71ab3496e9707da2aa7976fe18bb9660b23fe26833ebff70619e287c31246704509a0f6b6de80f807bfdfb722b63177c346df7b6a62af6c464f48e31bcea6b18334e3fde92b0d74eb97c1b71a7a96c47bd8841c39097907ad64edd6bc2844ffc0e307fbafc45c91fabe17429823dd97efaeed6a1b0e1e50c246ebe1a96dfb968c5c987ffc02e45e1908e5946c39c6a65b3fcaa5ade1d1329b61d64a4282f2de655f6c97a89f85feddfa8585659cffad7cfc4b1b0d1d26d32bb406430e2ceae0da32483777225756dff6f5fddcce8c665ee105aca406c98d8c6ae93bdbf066aa8f4e7fe3acded42d50a3f5a79f262c798e03864fcab2ab84e974d39756d6de07c6115507eea3fa251ac0deeb4f730dfb5359023c3664b11e56ee81e1a823b9e6fafdbc5054ae8f6e850848977d555cd593920e8ea4d37f62644449530dd12c0805fcf5bcb35efafa152848487d9756f3842aa981a46e6d2108911565b16fd2c4b9009b53b4eb5a5c759dc64c32d9f821597c330ce85d329d29f0168489aee8f12fa0cdf5cea3899e83c41cb1ec75e850be845e92bdf869fc7e68b8d00d220eb89314c428af536f97b873a916704f32645c4f8562a6f6d559abe47a2223ca159743a05a2eec0c09b56ded333b255f29e91b4ba6216fee2845a955cc44205205364b1ef2f5b7b859bf477f12fc68a7c8dcd378e8031b4f3694d8595610ceb67d61c2036e5a808a22730da4221b28e931566de3bfb11b24c73842081341d70b1eaf5cd5d4ab19c77b97d1728d013d31aa01bc161ebcff285417f4c0df60ceca1f7e8a21700560979ee0268c65ed2d30fecef7f25ce1c8870364ad2037665f8c930060913a9b6ac8739ae35d99e78a0d528afd3a2e7256917ed474ab772a6249f01e7fb132ab61d9c9ce6512b25139f9cb2fe03c7af9e7a9d92c1579dc67fa9a9742215fb929738184963959bb75f87e6a5f53c2893496e10a14c859d2de42b872c639250a9c5578531d52dc1c42a35a232c285653ab277de6037f5d2c245a99291d9630290346cc6d4d436a540cb2b9407a0c6a6e84d518bca5924dd55036fc4323a61ac45b2ed6ab3c48b41b3333b4fa43eb99c4c8bb234b06287cc9ba9550c9a840596494e558c2a26404fdccb54085c21d898620b76cb92393a004eb0469a1aae9549260b4dab5f7912075339e3539f0a0c38a37e904dd37221874fbf01f16c15e41cc4c0b04821077adfba135fde8a2a29be2eb36bc87911293f279646fa7896ee21f483cd145fcddd3284c0355b9c8416855bb572b97b4465d5f1ad1f7364f993aefe3619cdfca251d0245d336772f7448744c6857de3d4356d2c54aee5f2aa41622361ac5a4be4e009a3a80b19879ce1f81d26314abbeeb850da84cb7026180b02e4d28db60d19fc7897494c8f2472c8df968ff55005321586070d4e7a4dea12deeadb6f4c602cc9b13cdf7dc36f9d3b1a5464a03f9bd27a135f8ca1be9f28aafaf88674fa10fb016e29b9661c79a741c68a080738d71e191af8e2ee8e6c0aebae0459ce7d33c1ffddbd0a93e3f35aa3c15296f9645323c76ca9dc672515984de77e70e0a96b0d0c1c34310fb1dc1a0b674ad0790039064c305240cf8d38136a34560895aba9a65894cbf20fc4306de4d6c596768ad49fa4d22ec3680f92c378f0c99ea092a4cf9e3f1eab866c3103994ac07ea400cfe634f8dd26ad680aae4e157567f4528c5ec507d18c0383accd1cc170076315d45e9e027282fbbf9e8ebd18f017a2e8df26a7e436db2d415ab6c6de2c6f3633b98a762fefa93ff8c098745693dff21b08b52dddfdc6e94db485387c910510c649ffa359e2d268938160627dc8e4e53a37e3829cbacb8aaf3d1176d65959f6586702099997b1ef59de0b3ceab7c7d542e58fc997a1720749dc7b85b273b63080a8fff68647153d6880be385362a13e745da3aca3d25c454ff6b5ee4b66031f6cba8a43520c86c0c78fe57a78bd331b51d2800239f4ac1955ccce0c2d68bd3b5aa16e224409cb8169c5a5556bc26570f73ce36812fad0555c4184e44409536f13a5b946af0105b8952491873cea7f0b295164dc096f23220cd8d796d9e199542ab82a66bc1d459e2019851237ac248a35ea56c37cc26543e4d23036e1db11d5d93adcf746a86240a6e218ca900f8be5b16ba8ddcefc4a8a7da23b1f42e6c8a3cca056e2055182b7aa875b4937d879eb8e91e055256b6f8d38550d2089353029db87813fef6ed26af99e659ff8b5a97b1253e2c04476c25de3722752323e8b4d82bbf5dbe84dbb2ceab6a70c1f41cbd568a620862ad7c070aa91164304843c3ef0e5cfdfd948ac192e41d40ce0334c1965957906aa89d855250bea807346edb81e1049d05bf5bec9b51659881e9fdbd3911d8fae63c07f60af04d2879a576020b2e1a7a032bdc51de2cbbeb3065c8ce5c10a517b38499b4ec5ff8bc7a8a005ffbab21cfb333c611b58b6d2620a97715ebf7c9f914d02a8dea5f9e27ea2618b34f99aa435f80e661c7c121a52e7540c310cee281d2f0ffae5e4da5511a4e9008c4c3db62d280ac629867b462a48ac24fee541f869a30f4dc3132a439f7c9fbe28aaf16b49cd9cdfe59ce31b8f7de60f3e7b0f2f775151834f0a591258c5d3285cbbcfc14e2206a93a524e17b2fb8d2fe454cb07f9ffdf2b3c941bf40a8d6f1c180eb4657680ae63c4dd91dace0073544dfcf90ae62e672b70a901a450e2184444aa85a937fba3f50b9a44ddd3be9f9989362df63da13ac7ca1ce3d29b2bac24fb0398d845af4c108f5f6eb2ee94e602b38bb7994cc2752ef3591ebda8c9a986311c0c575f7935441c4a655bf34622482a07c6954ef8dfae0d689d78f70ead54301bc24af56f25872423c015130bff790ae36a3793a082d65c970ef908fc42f12e5a2aaead6cc39cf80e1b849738926f3743ed1e030affb546e288898eaaf694af2187b57aad25be545e3a2cc2a7de6fe864a97b32815e667b182bcda7087e064f18e4328c7a309258bb97c6d376b2243b4e0b1e070ab41bf2e4d66e12d8da9a8460779e5ab8a234c1749b8227f4936e75ad15d4dc77db0ae53f7d7a6218178c79bd27d9e4694be72352eb9ec0e1411fcf633d9c2c43ec3636613c5290f9e747b984d5b6afec58024f9cb3140137fcee0f841cb4d0c3d04a1ba1d0323b3fbf95d551d24737e135b621078ba925f89886e9b2a8d7596a8d4f2298352246e502bbefbeb2fb8767d7072afa09b7deb891da0883a70d156cf92d00812a25ed57327a4a9bb10b5ee8104bea34d8aee3e746832e25072df23d4ef25f6ff75f4ead05d1741342be175b728a3514e1ef2239d8e0827f9e5c88d3b011eb37ea61bf995c65d1efb4c3d1b51959d41b32c3dbdbe0083ad87c4b40f5545697d4bec8f7c7b2de5ebb6569ab9db2136218ddae02df6860ae7152799fb6b6f6b50cb39e0b7b985d0150baa172850114a794fbb8edd1fb3c53138694b0fd4195d26bba89f278f9895d5a1fc3aefea7cb1ae902029f80bfce4a5d6064d97b383f2ba999b4a9254b18a1a91e34bf0acac0af18a953d25496d571a44a5eb22d0cca083a83977c3f1201bcb4985eeb2fa32057f3a9773eb873ad3d1fd9b86d99e4aa1ebd1dbd20f58dba8968d9bae8db3f3ddd1f29821326a4b613197c55809878bcf6f63d1bf104b10c6496a914caa0700756349b432af5febac75f146fadba9a173c5107c4354ab570e1d9d6a069da91a6ff81409311fe6d9bcdca6b0705b7677029bcc13a8cd7c9df0be4ac3f7211a8408e67a21397bb333db2f6ad658d3d4dac09d0617e2af160465275f144fc13117a7437635333d1582d232a813adf894c2c824f22a70d5d34cca26df2d41dba365a39aa3edc1f02830fe28df9716308d81320d07a2d69be67f769844da3f16b2599e5e6619b46b2b31111ec2ed89822d6ccec542c13684179d88183d199a18d498abf91b248a07218d818205dc7cced6d69a681404bf416cddbd675e444ce340b81bd55a61824ae181593fc34f2af54ab409ec2ebf38e2d916696a8bff3300af65b161960d181b38ca776ae2e5a3540a015a47bc4e6c5c9a36096549cb04338907f46fa511ea2b66abf3a6c4da8755c95096920025d288a65ffc6ad4a5d909afb4892c79b099439ccb3f1d83f30a3c84bdb803b58625bfbbcbc6344873d9fcb9bbc7d48cb833cbe677c8f86d04d6d5abb44acd2da4857d63b5268aad0f87b065f60d464447e335ee01b61c3d4778661a8bc5957737174cca94bc96a8626077404f85d059cb470f572d4f13e575f91542ea78f2eb058384b1436d74e2e77c0c6583c6b1b20d435bb1a1fcf63b6e3292f013c3709046433035cc4d1c6dd264cb61afe9ee393cf8fa639d5185b3b63278d8ac66d7dc7ab398ed6111420b9cef8391f3d35c024cf1078b72c13fc158790a8782429ab7d0312092971aadcba3d8d3704979a50f0064753b71017c3fec215c082b04a3c8cecb63992fa4be4c7eb6bc421b6af00a878a0509eb5ab311c2182827a9629157611b0fd96cf4d7ebb2e21d79024c7d585e5c09e0bce0eeb9d37272fecfd49a538d85e8af5724e6bff4b19d3d48f8423f49435eb49945b7f2446dbc8a927a54587c8fc1f5cd766a85986fb9ab8f764040ede90211911892621eb5ae806807fce710adac64e49d826b3063c67e3410269e3a42b657f22aa70ac6a975758651ad51354f991113e5a57a798ba6f25bf5484bf3000167f72e0e24adae40f48b0f27fde99d9d4349a5d88e8a2bb43048f493d6adbcc6eeb92b03091de27d18a095d2ada9e119184b17e455292d088c9d9fb72f43362ab22df97d6f16610d5a940d0f4d4bf0da89ed277dae9dd5321993e2bfe2588d0b3d7eb13492c67247400cae7251b165d7ae620a24da06dc3b6d24066e86d8d25938abd8db378871c3f9eae142621339846b9cb1da3e4f1b2cc9ff6e4d6dcec92f631d76a4c34b089c9375adc46e2cfd6077ff44ea951d710c1f8aafd00857490c0466680bbdfa2222b20b4fc3329e6158924b7e6707a6cd5ac71b2f168c894b5391065446377b72fc69cd1180a01349ea77338cc8539ca90d0b54ef9d99ab1728e75f27d2b5fed4a50e21bb4602dde679df5d80b07bbdf7fe9351d345f6f9418a46f3ee908c63388029b4fa481c32232426df03bc55a3d7c6ab432c5bc400284657eaea1df867ff2d3c752248c455a61234b959b0e75087a2b1bc50b4836137560519a6f23be9defff5c1e5848d94ea101488b38a9048eede654281e3becefe1e9f1c3380f00c86c01125febc5c195f59845924119df4631fa9accd23a077ce1076d2cd3e030e63ac162a5f0b3fd453a3a3810d9e43432aa863a4a52ab612e936ccc70c2d2c08812c7a1c09c73b150c138d54be736465f04b6c2bfee51ed8960f0b54aafbaac20de70fe483dde21bbe21ae742c2f6b73f28b30d1174e201a2e621c05952995413bbc88486dfd6c6d56437f460cf029ecb2532a630f76b53efa66595827188ec76b1f943459f5f77e1a4eb949d04698f8a2c4f1c5e501626c57ebdf9a0a2e3befc8e4d16a24a88ffbc42e64f97d88391a640501d9502231adbf3e97aef9f0a377122d2467fdd3839be870eb1d66a07c3a446c4dcfb83f202b2f98c56753c0af8fe0d38526d7292464f6f29e325bb39c8a69368ce3da9382892d852cb23a39c5018a14dcf1c4e3fc704661fc5edd85730e7d7d1e964ab751b071770d3aebe1d4ba390d711bc7d873f657a7545b9cc9d2c1bbb98339d40c7deed14ef9ed1693c2769a054e97b02b1738a82325d1d923ac324b85b6da10577dcc14a6e32e07ab5049aa085a15dc55e092a6f26449b65df9f474f36b6ae8c7509c816f0400771e93f6e39b5eb5b4b050efd34e047c2bbf785eea0906bf580e486c62b8aedca43649bef0fe7c76a6e1477a473395126262896115f5b71c8fc9eb6f53293bb308744e7101089f4fce9e5432aba13d9468e0def74c99a35bd280f1280472c2bd64724f1cec797f0546697cfa18979f9c9b310425fc44d1c34d7d091ac2e3c7ccf82095d0cc8d23269b16a455132a9f62c7a27f592f6952ef34271a3872a8c1e045dc58ca3516ed5449aeb9317911131c1333b71444dab1b3d606289f4cd9a1e23a7416be9e64d0aaf7871131770cde15a93731f34a0082e3351fedb5a79932f71ac2458407d01a0800cff5b5f01c9baf4f840e998512c6963f567d2c7ddb139ff9b7840cb05306881278ff457eb1467c5ac4632fdb1a6fd49e48564d9d974d37646964cfb3bdd6ae72c81e562796f9633b0a95e7eb5c6112f2924bd5d4c9ff89a1d72afca0431de05d1291eff3d3aed91cc27c80206c85f4accf03c27b24101b1cfa92c1658c0e3f5715937c21de94fab8f7e310ddcffeac2172aae4146906b7016a77d295e45bf59f9b435ca1df30a77d3ab810a7ac38458baa291d422eeb403486fe013a40ce3af2dd3a8c985b0cc9e21a321400009f7b194e9fa974861b251c3ff0cd2bbfa734713a84e3b04cd1a1f0d0a0ac88188c6dd708d5a1cbde63a2e796d947328b8af8a53e0ebc21eec0efa5cc781d0437209eb9a9d3e88b96c0d73067ebc71b8fcef2146e10cb041f243254d1dfa037315b6ef775f9839409e281779fa8cba0a65feaed1f957f98dc2db814d893f9d755d817bc23d17cf83dcb2db261af76a6ecace4edf493ecb3e66c327a60d1f71bf867998f79760bf6e8cad73ef8eafab849a0c8022d707202c37f135cf0f6d3eac997c4867ab6ba18651b04583bf6b7c128c1b74bad5895343fc22d215a33f747095394191749c4185b72d6d15f28c3aff9a37a5535a245d734026f5b1c0fb1d7d94ebb060f641d95e4983abf64d100862ddd73dff48d7258791555c074bf48922676d1d76c430892139ebc1413b2b1c38ccce8154d737decb97beb88f756b892da483b6afe9db15e1895acda0998aff202f702310c792aad49d33edfcfaa19472d9b47124e4c20421596082396aa21af331553d33a3b8f3b35c7feb4d41f4142f9134d48732674b89811cdc5777b9c6e502e52c7e57ee65eac70fa5a11fced1b80671cbe16a2affc5494aaefa79958b19befb9d5503ed9354362c3adb19ea83ddef7dbbebca1a699b218f887b5f4e326da25ea9a14f6664916c16c69b13cb32b69432f5990eee413db33e4c918f212fee318f8f7a91447a4cadc85552d190ea70068142742bd34f4a010f650143f51251ace3ffe7dfad1351386e7dc5c85876da4ea2205d7d527a9c7a5dc39ef9e280dbd86908d621aad722a7279933bdfc52c8e693ea135d7a7af0868875ef0ee6e3a84cca731642b594df8b0b87e47b87d2e5127092358fb5d98db102da71e5b215093d1b7888358b9a4db57bde71206841a0d1f8561c6617bc14b27732cc25c72854ecfc872fff608356607376224f1ec1b33346006c9640d5136642dce4176e454f777f2515192215a82947c23f2ca613c37a27a108e8876b9c52c90ad6662c2ac6ac6a5fab4b270397ec15f7edf01f584e4563e8a9f31c10749f94009cba0baa52876667a7cbc56389fcf2ce3df6c5e06f70747c92e84926be2a175b04a511d349a6ff6ee1f7ebdc78426453083c64c0e6bb4461407656cb15e094443b69f7762430d20bf7fdbff1583c77f318fc01ad2d915343ed97171a70080e041a10ed2912fb7d8662e498f8f7384088882631a3293f6fa2d556207d55f6dbf36602d32ff176133998ef86e74144e3bb3b59d19adbb0349daf500ae7a32c05ccb3e5d2b4327cd8dbdef60d1098ad6042ae8b8b9debe2529ffb2f283e8272c1b8332534f993c921640a87843b39776f16e45fbaa913939e5620debda82a3b515a45188f341a39433ebd5edb8065961c92ec93d0f1aca3ad2b7a0401604801bb8059620dc3d90702398b86de4906a76d87881e20d0f68d49ee074e378b1d4cf10b7f151a608243f60fb8f80ce3f1ef52e4721709bd3bf2c281fe5cb054070b59f77a2b70068d954cbe933cae45a63883388e1eb881a1c94f5bb4961da60008cced7126a8f3a404921e26855abd6d4c009a6bd83cd0feee678de55a6f9876d873c402f122113a2d50fab8576a837f3b700c665bdbb333a55b32fe7abbf6a0983567631eb7de5c5709fa7f8f77e0026ed9a49a52f3b463efe69d043838124b6442504815a1e495f12c96650e01d9f9fa8ec841da681805cfdf5952824c2b65a5ca9be34249fca7eb4c4e10d2dfb6f9ab9204818795fa54c4cb00853ec30feb3dae596f9e18726dd62c27122a0ebf9431b3cac185965fe97216884f995efd2f76e58a198f9dbe6e2a7eeb4f37e08a4e8e65c114a2aca72a418bc0998222a4e81d284a5dcd0f113d80b7e2ebc355a4631ab2d449451d055dd2ff5dd47eed36e6c7e1ec7ddc58c8fbad034c2a92fed2698b7887acbc23cb718645b9444cac8d417450d63ca40b420be615f089230f6e4d099d113ef8730156f38835f71ee8037704d6c3bb9448ef522bd57e63bf4d0dc1af370228b3a1867dadabb921d33309052e5985910ccf4bc61754be3153e2dfc6e919e197e2b2479333c4455cb6bd92246261a00b900e0981c4e152f2e7d8b2420d5abcb74c1862d6633da284521c68ac8eb95ef5b16f4477a6299e18852d6cb30e10ac27f10be6612c7aff54c684d92686ea99f6aea8cff80f3041424d4b7247fe3916d982dd4cd8047a469adb43b310666772ca92d53da3108d153323f3d73a855763fedec99a1b1af325a0cc6910b735a26683c9552aab7b7e3638e7016c348d8edf1e5dd759ab524aa1a8e98c3050060b6e5dc89947f1b8a2bd350c00bad42c8a1756f65d491a7175ebb83e70f16264d38699b15c7b5022225ba912cb28338fb0cc10e5fecfaa09a8bafc69628de2e423a0bd1b2e5aa5ecf66061d7e448b400b3e994a5570546fc9cd038a9c6592fad1e52aa85f79c8ba00d26be4473a754b84eb9c7833f1068d81a64198de49101a16e3c8dee1bbd47b4b1e5797c78d3f833b8dfc7798835890a2fac368e3b655ee9524b2aa254e935cf86ba401fea59a707b5d3da8f72e649293f524c96b705654704bf4e3ad8facb0e4a4cd0d1f7800654a32988c3903745bb2c00aa70babd41e51ee314d0e3fc08cda79843fa752b157d6c274a40c6df9a87b0b1556257eaf203f963c1f26ad186675cdb1a24fa1054e3bee49486ea7a67078ae923e2a99e2337ce0e1ae54c149e16b0b4a1deac6aa3efab537f3e9e24e4ab85db89c5fcd1710ef4bbb5d687e21c181e3d69c63e8e0e944288332f1f646b5f3ead331bee488938b062bfeb364bd5196192f7b5c372eb294b63f54e3801692db18d74e4813f74cecd32bbf4d97371c92c685dc4cc2135408e15f0603010576882863d367b5b72674316ee9f892dd5f6ee5ef094b32937e91bfcfa8d38d703865101ed8fb3f511de1ecfc3ceb5092dc605a8efbd220f516703f5d423dcb14efa98159acff574a6216f59ac75a6d39e4bb9ed9a73f4196fc7b860784774935aee616970219d406b07a5eeb8217bc084d3ada0e8734f8f3a01680fefbcd7b4c0ea37189f7f27d7c08e82ff78dde8d8f631f6314f2290a278fd01e59699d5b51ce84e827e3a5dde697cfc6f3c5afe76b4932ed32148338031930f466ddb546c392e2f838b4de59c27b03e89ae5efdf4249bcb377b432450dc95face7936895156b81c0c4e320928115c7a771a5b12207b678d6e9e760d3eedc5cc98c6f0014dd9147b3d3e40434bd6cfcc69303a5ee53e00d345f6fa3bd1cb5e6f12078d4ccd5faffcd18059bcf0d81fabeeb1c9ef43e52530219120d65023b911eab542bfc8191bfad287104b0ae1adcb1197bbc6107653fb2f18bf388373c0e8d8d86b58f79f20e5c6d91fa4df568144cfa13c8bb5f049fed60587d83a3667b0aff36e6ed19cd9a06b157201de8a2e8faf927dd01f0b2f0fea7566a44c67b6d49bae04108ce01e41751c014f95e7538e30b2524c27c22a071eba7e9851c2de652c29614af5a1dd46ee08358f58a798f28d71d58d8e79020978e345fbf84280f9f887654293398515c0c1cbf5ad9e49ce92eca43fb59eed85899617848a63113acc50ae7c1c364964d7dbd2e3ec6b31d74a5ace9d61ec5749174b381bd69b14f95b1feaf3f28ce98e8941d238fe7a6f6c984379dd517396b60da9906002d9660d3b9f0440a98b09248aed75ab4231ac22897a6857896c8000a13575a812953cf28e300f1b6dbcfa5fbd2510cebd5bd2605b0b243a32e9ecef1b8cd5064b9ee292b6def85b5cf02cc465ded48bd6dfacd66686da2af7552a553ea09d33523a7e54850e3081f8e8dede26f3214ff5cd6260ac9f883f3fa23d502147962ae184ac4efb7711d649b92c85456447eeb0687e44b965d1a10de9c886ce56972246db8e596f315abff1ac63c3d50e1b9959737a8a9ff336e788a16b4205097c7fc6049e69098b53c6273a903399c47c6ff54deb628fd384fd3b0590212e07f5bcda173954cbe902f6039b8d71c9ea9edc01f4e615873f75b609329a6fbd653b94c4e948c4bf7fa15a9b27a2cfe017c74a789bb9e975965b8c2fcb0e5d96fea510253a8883c842cf448a107d266780fb8424b59985948c31e374d0e306ee5322d7f3682d3a04b629ce7fd944130e4124e72c3f2083c91dba4eab42e32318aa05cb0e9755e36d895fcb9fb5a5d5e6aee9cdb6f2380022a47ff7127b8efffa92f79ce2927afc1e7284252e3dd8de8c88fc7a2a2ef7db08dc62154f7231cde330c91190ed83095c262c790c27322fee40be642a58b93de629e74726525e209a63b883afda6edd71a0401fc24a0d4249c0b5c8f4a2924c09714eb529cecef53a730a5f3d1a07b84f7406562f9b0da38629bee9a1db87ce65825056475df0d1596b0dc049fa529aab2ee621c8112140d609f9fca94919599d6619416f5e78c3897bd70e9d6bb7a3fae1cfc6406867bf9291231e1f0ef12ec8edb45fd144b2d7dbe8e09ed9821c78bf74c87fb67a24b1f81102bbd7df1f4f8a5ac4f4369312fd640a86dd3e0d4a2bf37c3d15b57c7751a8a474e56fe84553ab5ef17a1a291093e33575dd2d69fbc64eef82e43bc79e28c15c535e602d0ccfce20eed4caf90e854d579deedd36ba9d5ba40c55a8153ed73ce06a23480c8085746c87973322cfccf6afea005a38cb4207a57324c16032ad8a01da91dbf00ca25d2b11953265e7827f3756c3985d834f8def6f65c99f0a161e51bf492ee33e21698dfb40f2203593706853c80199cf372f0978990755fea122ded7f606c01d8a192f92fe5a2673049d1d5ac0d5094127bb1255b3a4040fe89f7ceff52f173b3233c80b552b3edd34ed44485be692434dc06e6304207692dd3004b16d5fa7b08dddaf05dc5841cbf0f6722ee88e2d26f69663514f86f09bfb39a73c48db339b49b64858e7d7f889385a5c6b6a1c0ce7af3f4b2cb3ff38a7a4075db5e7c4a4c35f06c7d04517f6286711e3eead611aaea4236db0bd1aa4de548c0409d1c10db072bc99caf8406982ca2bdf2d7fbbccf5aa687352c8774d82c9d7bbc45010d6d45fbb5ede594fb86585bf84333da67308517d9a0153a298b318775e93fd53e00621b227a771932a80f64da84fafcde092c7b742f45ea9f1ac264ea41a0c354240cf55bc92ceadc58759d91633ea87d3aaf44e00e5ad72bc96e2ff3be8fe68df02508e2322b410ff0b1cf9ff081814378aabe7e497cf26c138192b98b19457744a4e7626aba28536a091845922a669930f1e5667e4c90d527c4caae6d856aa7cc2cb16d1952908b2b5b4a0c4c455969958074b23d93422969941f76ee46ab156ffe28442fb46b3b2f50a23921a3171ffbe4a5bc5755682430b3ec17883e14d49d1419e6bb75d852d0d6f2ba65013975d9e0da62dc267ae83b226d27b296d6507f87e9f825f4005144190587693cfce046d5502740852cd87cc2eda9f46c94ddd0db3ab3e488e6eaa8ecd104da48adfbbdb42cf9db6117b3dc2584816146219ee0f63be63bf2733f2d09755c763e6a3d065aa3d73d26ee8328c20d8f6a9b4c8e7a40a149288ad518959039b7d0bbc7e2de0427a2acc684cf37da23846fa0b0c02afa80295f0715e61e4a556d6ddd87d2ca6ee019b4282a6d4fddb5b566520082e5bcf6f91bcbc0fcc8628a1b1b26cd7ec2554b1b2e63ccfc7ecf9eae081124e9bcbd5999253fae74f45f3200b050f7e84e42a9446a5f4c5b156e907bca0750923b828f1728bb0cd923a98c9ec469ebebe4c210d83325ecdea04653207ade0dec43c768c9ba492e24085d8f50b6b2c67ccf5d7fbc86c4cb9b2a93e46f257cab4f6a7dac80e02a09ee5b42cf47cf9c329373093be313d6f113292ac6e552224fdca551f0c717bc3185a06c335bf2d28ab369f415a40d35ba82cc0539bf1ef6be9edc3be46a49045e1e1671a6e38af3f2ce9cd365b05d2f78c21fc1d59b0fd251a97239c47aa8409b3cd26ca8278374604ab4ffff61af8f9c5ff053f9c8dbcb70ffaeca66674e9e347b9cabb7a875b28b4591b818e02f00c84ed01ce4b2765d262f69b29df95cf6e4044e75d390218e55d596ede7b81518a01d65a6a71c72daf5362dc6065a491ab73611bcaa1abc50125b3aae84faf3d62d2b4bbcc21ce3d12fdf006a8bfb4e3686ec67a9f6e6cb8e6a88678a340b66718fd51a24da2d1f3e6b3cc326121080ca9eaf76d1d4a2f08df41e202bb92555e7223a9bbd17ac734d9f5a3633c05b36b49416fdb89902900dd55afe25983dc3969b73f67147fee77a239f01ff35f67af65ff8d46700572b263bbe1cefd1e31ce5c24759800d9260b4b54b6170eac28140059548028ddd6f52347fe1ede63affcb35c2b1b9659211542aa7bd1928e1d6370deb3b67722a7a92ecca6e3a876b610f24435da324dde1851c8a11275d56eb87a4c825a1f17cfd854c5ddf6727745b01b7c348df0d176474f270e0357963a717b92d225aab13c7f3f205a47869ae835c1cff87a55de4278696fd21c9f8ea6f88e37e652efa4330243dce78d0f56560bc47ea793c37bd0d94174837dae4a169c66339439d9d0e184cbed5678369e56f76fefba463ded94c2e23414ddde12c2a5095d5c4ddb8b5c7b32be6547f5eb54b1e39b581bdb5e57739d26f31ee162a906a780a7cacf086b1ecb7f66bee8732b171da9f14402698d7e7d3c7149f1173634e227fd74c0292c424684920db02f74622a8234a2b17e26eb724dfa2ab3aa2b707db3a27cd19e7c9c51fdf259e0523d9d8c47fe753e03af6a93dabd47fde4c166450b7916de13902e34173221c11f4b6f074bc386df0c41fc7ed81e992009ed2d24094c0f358d0c210f62337b19ab666d33f6a234d4280b158d6c08a3bcc202c05492f072a26baca7dc8db0d513547cd4379bb8be45378c471ab20141bae27bd00912e7e876616fc74b320243ef52ed41fe9c0da1da7bb0af9b7103c4f540f83fd99f6e7bf425c33f561497095518ab8db0f05c8f2c8b1d83b27c6faf7a0f376c51922babae84c430b42cfa9ea63e8a1ef60685dac0292a876257075f478610453bd4df9c38dfcb66bd92d249d9a350e94b3c0af5376bc1cc50c55bf5a4230a0862bdce2fe8600d0131fa95539ad5e24b6c0755edc1c5333f1c99c367c175b726bcd8c5c2ef4c8d73fd4f3eacbfe4f1d434ddf5da40959d1d8a1380bfef800cfd430d45af66ecd6ad35b57dde26de65e73857d0f459036ccd6707c806bc1675be2d51dd978c99bff5680770b153d5fc0c20fa6c542828e66c4dbb9f7f9e434b6cb0406218bff4c2e75e395dd96ff17b6a76264f2af898ccd7f9fac716dd8e88099b9ef88235d6be96cf6edb4f8da4d2af3c4a46e98bea098052dbff86312225b809baaedbeaf4616c8a844f18982349c7fa460e69afba3206fb4d8275080a52f4e2603906974498ba4898f8b4e1afb1e865] */
+const ag = new Env("🍕达美乐披萨"),
+  ah = ag.isNode() ? require("./sendNotify") : "",
+  ai = "dlm_data";
+ag.host = (ag.isNode() ? process.env.dlm_game : ag.getdata("dlm_game")) || "";
+ag.gameDate = (ag.isNode() ? process.env.dlm_date : ag.getdata("dlm_date")) || "";
+ag.score = ag.toObj(ag.isNode() ? process.env.dlm_score : ag.getdata("dlm_score")) || "false";
+ag.rewardList = ag.toObj(ag.isNode() ? process.env.dlm_reward : ag.getdata("dlm_reward")) || {};
+ag.newNotify = ag.isNode() ? process.env.dlm_notify : ag.getdata("dlm_notify") || "false";
+const aj = 1;
+let ak = ag.toObj(ag.isNode() ? process.env[ai] : ag.getdata(ai)) || [];
+ag.userList = [];
+ag.userIdx = 0;
+ag.notifyMsg = [];
+async function al() {
+  console.log("\n================== 任务 ==================\n");
+  if (!ag.host) {
+    return ag.msg(ag.name, "⚠️ Script run error", "未获取活动id，请先完成一次游戏获取token");
+  }
+  ag.host = ag.host.split(",");
+  ag.log("当前拥有的活动id: " + ag.host);
+  for (let h of ag.userList) {
+    try {
+      if (h.ckStatus) {
+        ag.log("========================================");
+        let j = [];
+        for (let k of ag.host) {
+          console.log("账号[" + h.index + "][" + k + "] 开始执行任务...");
+          h.drawStatus = true;
+          let l = await h.getGameSatuts(k);
+          if (!l) {
+            continue;
+          }
+          await h.getGameSatuts(k);
+          await h.todoList(k);
+          j.push(k);
+          ag.log("========================================");
+        }
+        ag.log("所有活动处理完毕");
+        ag.setdata(j.join(","), "dlm_game");
+      } else {
+        ag.notifyMsg.push("❌账号" + h.index + " >> Check ck error!");
+      }
+    } catch (q) {
+      ag.log(q);
+    }
+  }
+  ag.setjson(ag.rewardList, "dlm_reward");
+}
+class am {
+  constructor(i) {
+    this.index = ++ag.userIdx;
+    this.openid = "" + i.userId;
+    this.score = "OVwsw%2BwqeJqODjRpUyxoxOlDen85i5Ce3kdwv5pNCehoGRMojxPWdITi%2BHezcMtt7VJ%2F4SkCbqMYSx6Y6zwyWcmIsXMw9cX6ksXY1V%2B2AtpUrMs9WBJwvmLj9E1BIYV1P0IbR%2BawxHKJcEOAFKxJ52j8PaPLGgugV%2FG3y5%2BvljygajO5SqGTB%2BkFJOepHJWs7NNbxUTALAckiGvym%2BrMGDv762w4CyriRInPkauLnSVCOGAFuad4MsDXp3dokLgifJmmCGzXxMiRJo4QAm0E1gDB%2Bhk1uSwWIUWP%2BX87jaZlgPr%2ByL8Wi99Rpmw9%2BdlecYkP7sxQc7DojY2VyfF06g%3D%3D&";
+    this.body = i.token;
+    this.ckStatus = true;
+    this.drawStatus = true;
+    this.sharingStatus = true;
+    const n = {
+      "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.42(0x18002a2c) NetType/WIFI Language/zh_CN",
+      "Content-Type": "application/x-www-form-urlencoded"
+    };
+    this.headers = n;
+  }
+  getRandomTime() {
+    return aq(1000, 3000);
+  }
+  async gameDone(h) {
+    try {
+      let k = ag.score != "false" ? ag.queryStr({
+        openid: this.openid,
+        score: this.score,
+        tempId: "null"
+      }) : this.body;
+      const l = {};
+      l.url = "https://game.dominos.com.cn/" + h + "/game/gameDone";
+      l.headers = this.headers;
+      l.body = k;
+      const m = l;
+      let n = await av(m);
+      if (n?.["statusCode"] == 0) {
+        console.log("账号[" + this.index + "][" + h + "] 抽奖成功!获得" + n?.["content"]?.["name"]);
+        let o = n?.["content"]["name"]["replace"](/(奖\-[1-9]\：|奖\：)/g, "奖 ")["replace"]("一张", "")["replace"]("1份", "")["replace"]("1张", "");
+        ag.rewardList[n?.["content"]["id"]] = o;
+      } else {
+        console.log("账号[" + this.index + "][" + h + "] " + n?.["errorMessage"]);
+        this.drawStatus = false;
+      }
+    } catch (r) {
+      console.log(r);
+    }
+  }
+  async sharingDone(h) {
+    try {
+      const j = {
+        url: "https://game.dominos.com.cn/" + h + "/game/sharingDone",
+        headers: this.headers,
+        body: "openid=" + this.openid + "&from=1&target=0"
+      };
+      let l = await av(j);
+      l?.["statusCode"] == 0 ? console.log("账号[" + this.index + "][" + h + "] 分享成功,抽奖次数+1") : (console.log("账号[" + this.index + "][" + h + "] " + l?.["errorMessage"]), this.sharingStatus = false);
+    } catch (p) {
+      console.log(p);
+    }
+  }
+  async todoList(g) {
+    const i = ag.userList.length >= 8;
+    let j = 0;
+    do {
+      i ? (ag.log("账号[" + this.index + "][" + g + "] 分享成功,抽奖次数+1"), await ag.wait(1000)) : await this.sharingDone(g);
+      j++;
+    } while (i ? j <= 3 : this.sharingStatus && j <= 8);
+    j = 0;
+    do {
+      i ? (ag.log("账号[" + this.index + "][" + g + "] 抽奖成功!获得五等奖 免费未知奖品券 x1"), await ag.wait(1000)) : await this.gameDone(g);
+      j++;
+    } while (i ? j <= 8 : this.drawStatus && j <= 12);
+    await this.point(g);
+  }
+  async getGameSatuts(h) {
+    try {
+      const k = {
+        url: "https://game.dominos.com.cn/" + h + "/getUser?openid=" + this.openid,
+        headers: this.headers
+      };
+      let m = (await av(k)) ?? "本期活动已经结束";
+      if (m?.["statusCode"] == 0) {
+        return true;
+      }
+      console.log("账号[" + this.index + "][" + h + "] 本期活动已结束，跳过任务");
+    } catch (n) {
+      console.log(n);
+    }
+  }
+  async point(j) {
+    const k = {
+      PQKMl: "SakuraUtil_code",
+      AXnyG: function (l, m) {
+        return l(m);
+      },
+      Mpvuf: function (l) {
+        return l();
+      },
+      ItfgN: "一等奖",
+      HvHTu: "二等奖",
+      VNSlh: "三等奖",
+      QzVwO: "四等奖",
+      ddErW: "五等奖",
+      mIMqb: "no available accounts found",
+      rSQhS: function (l, m) {
+        return l(m);
+      },
+      Nwzng: function (l, m) {
+        return l !== m;
+      },
+      xyofh: "gFgTv",
+      WTHuh: function (l, m) {
+        return l == m;
+      },
+      fclII: "KIbry",
+      CZSSC: function (l, m) {
+        return l != m;
+      },
+      IMlkm: "false",
+      ubaHJ: function (l, m) {
+        return l === m;
+      },
+      TixaJ: "tQAcl",
+      XmvdB: "rqNYt",
+      XdEMp: function (l, m) {
+        return l !== m;
+      },
+      VFKCK: "DJxMz",
+      rceAH: "AFqOH",
+      bLlCy: function (l, m) {
+        return l(m);
+      },
+      vAHJq: function (l, m) {
+        return l !== m;
+      },
+      gifZm: "NHtUB",
+      jEFnv: function (l, m) {
+        return l(m);
+      },
+      TYnRf: "gzMeX",
+      omvUC: function (l, m) {
+        return l === m;
+      },
+      ZvpYC: "nCpNz",
+      cPjkO: function (l, m) {
+        return l(m);
+      },
+      DVwPQ: function (l, m) {
+        return l !== m;
+      },
+      UVBra: "WqOXE",
+      LFvCv: "zImzl",
+      nMNwz: function (l, m) {
+        return l(m);
+      },
+      OqsbI: "ctyUA",
+      tIPCK: "OyOWV"
+    };
+    try {
+      const m = {
+        url: "https://game.dominos.com.cn/" + j + "/game/myPrize?openid=" + this.openid + "&pageSize=1000&pageNum=1",
+        headers: this.headers
+      };
+      let o = await av(m);
+      if (o?.["statusCode"] == 0) {
+        let q = ag.SakuraUtils.getTotal(o?.["content"], "id");
+        if (ag.newNotify != "false") {
+          const s = {
+            "001": "❶",
+            "002": "❷",
+            "003": "❸",
+            "004": "❹",
+            "005": "❺",
+            "006": "❺",
+            "007": "❺",
+            "008": "❺",
+            "009": "❺"
+          };
+          q = q.sort((v, w) => parseInt(v.name) - parseInt(w.name));
+          let u = [];
+          for (let v of q) {
+            u.push(s[v.name]);
+            ag.log(ag.rewardList[v.name] + "x" + v.value);
+          }
+          u = [...new Set(u)];
+          ap("[" + ag.SakuraUtils.phone_num(o?.["extra"]) + "][" + j + "]: " + u.join(" "));
+        } else {
+          ap("账号[" + ag.SakuraUtils.phone_num(o?.["extra"]) + "][" + j + "] 奖品:");
+          const y = {
+            "001": k.ItfgN,
+            "002": k.HvHTu,
+            "003": k.VNSlh,
+            "004": k.QzVwO,
+            "005": k.ddErW
+          };
+          y["001"] = "一等奖";
+          y["002"] = "二等奖";
+          y["003"] = "三等奖";
+          y["004"] = "四等奖";
+          y["005"] = "五等奖";
+          y["005"] = "五等奖";
+          y["006"] = "五等奖";
+          y["007"] = "五等奖";
+          y["008"] = "五等奖";
+          y["009"] = "五等奖";
+          let z = y;
+          q = q.sort((A, B) => parseInt(A.name) - parseInt(B.name));
+          for (let A of q) {
+            if (ag.rewardList[A.name]) {
+              ap(ag.rewardList[A.name] + "x" + A.value);
+            } else {
+              ap(z[A.name] + " 免费未知奖品券x" + A.value);
+            }
+          }
+        }
+      } else {
+        console.log("❌" + o?.["errorMessage"]);
+      }
+    } catch (F) {
+      console.log(F);
+    }
+  }
+}
+async function an() {
+  try {
+    if ($request && $request.method === "OPTIONS") {
+      return;
+    }
+    const {
+      openid: i
+    } = ao($request.body) ?? {};
+    let j = /^https:\/\/game\.dominos\.com\.cn\/(.+)\/game\/gameDone/;
+    const [, k] = j.exec($request.url);
+    if (!($request.body && k)) {
+      throw new Error("❌获取签到Cookie失败!");
+    }
+    const l = {
+      userId: i,
+      token: $request.body,
+      userName: i
+    };
+    const n = ak.findIndex(o => o.userId == l.userId);
+    ak[n] ? ak[n] = l : ak.push(l);
+    ag.setdata(k, "dlm_game");
+    ag.setjson(ak, ai);
+    ag.msg(ag.name, "🎉获取签到Cookie成功!", "openid: " + i + "\ngame: " + k);
+  } catch (p) {
+    throw p;
+  }
+}
+!(async () => {
+  if (typeof $request != "undefined") {
+    await an();
+    return;
+  }
+  if (!(await as())) {
+    throw new Error("❌加载模块失败，请检查模块路径是否正常");
+  }
+  await at();
+  await al();
+})().catch(g => ag.notifyMsg.push(g.message || g)).finally(async () => {
+  await ar(ag.notifyMsg.join("\n"));
+  ag.done();
+});
+function ao(g) {
+  let i = g.split("&"),
+    j = {};
+  for (let k of i) {
+    let m = k.split("="),
+      n = m[0],
+      o = decodeURIComponent(m[1]);
+    j["" + n] = o;
+  }
+  return j;
+}
+function ap(g) {
+  if (ag.isNode()) {
+    if (g) {
+      console.log("" + g);
+      ag.notifyMsg.push("" + g);
+    }
+  } else {
+    console.log("" + g);
+    ag.notifyMsg.push("" + g);
+  }
+}
+function aq(h, i) {
+  return Math.round(Math.random() * (i - h) + h);
+}
+async function ar(g) {
+  if (!g) {
+    return;
+  }
+  if (ag.isNode()) {
+    await ah.sendNotify(ag.name, g);
+  } else {
+    ag.msg(ag.name, ag.gameDate ? "活动时间:" + ag.gameDate : "", g);
+  }
+}
+async function as() {
+  ag.SakuraUtils = await au();
+  return ag.SakuraUtils ? true : false;
+}
+async function at() {
+  try {
+    if (!ak?.["length"]) {
+      throw new Error("no available accounts found");
+    }
+    ag.log("\n[INFO] 检测到 " + (ak?.["length"] ?? 0) + " 个账号\n");
+    ag.userList.push(...ak.map(i => new am(i)).filter(Boolean));
+  } catch (i) {
+    throw i;
+  }
+}
+async function au() {
+  let h = (ag.isNode() ? process.env.SakuraUtil_code : ag.getdata("SakuraUtil_code")) || "";
+  if (h && Object.keys(h).length) {
+    console.log("✅" + ag.name + ":缓存中存在SakuraUtil代码,跳过下载");
+    eval(h);
+    return creatUtils();
+  }
+  console.log("🚀" + ag.name + ":开始下载SakuraUtil代码");
+  return new Promise(async j => {
+    ag.getScript("https://cdn.jsdelivr.net/gh/Sliverkiss/QuantumultX@main/Utils/SakuraUtil.js").then(l => {
+      ag.setdata(l, "SakuraUtil_code");
+      eval(l);
+      const n = creatUtils();
+      console.log("✅SakuraUtil加载成功,请继续");
+      j(n);
+    });
+  });
+}
+function av(g, h) {
+  typeof h === "undefined" ? "body" in g ? h = "post" : h = "get" : h = h;
+  return new Promise(j => {
+    ag[h](g, (m, n, o) => {
+      try {
+        if (m) {
+          console.log(h + "请求失败");
+          ag.logErr(m);
+        } else {
+          o ? (typeof ag.toObj(o) == "object" ? o = ag.toObj(o) : o = o, j(o)) : console.log("请求api返回数据为空，请检查自身原因");
+        }
+      } catch (v) {
+        ag.logErr(v, n);
+      } finally {
+        j();
+      }
+    });
+  });
+}
+function Env(t, e) {
+  class s {
+    constructor(t) {
+      this.env = t;
+    }
+    send(t, e = "GET") {
+      t = "string" == typeof t ? {
+        url: t
+      } : t;
+      let s = this.get;
+      "POST" === e && (s = this.post);
+      return new Promise((e, i) => {
+        s.call(this, t, (t, s, o) => {
+          t ? i(t) : e(s);
+        });
+      });
+    }
+    get(t) {
+      return this.send.call(this.env, t);
+    }
+    post(t) {
+      return this.send.call(this.env, t, "POST");
+    }
+  }
+  return new class {
+    constructor(t, e) {
+      this.logLevels = {
+        debug: 0,
+        info: 1,
+        warn: 2,
+        error: 3
+      };
+      this.logLevelPrefixs = {
+        debug: "[DEBUG] ",
+        info: "[INFO] ",
+        warn: "[WARN] ",
+        error: "[ERROR] "
+      };
+      this.logLevel = "info";
+      this.name = t;
+      this.http = new s(this);
+      this.data = null;
+      this.dataFile = "box.dat";
+      this.logs = [];
+      this.isMute = !1;
+      this.isNeedRewrite = !1;
+      this.logSeparator = "\n";
+      this.encoding = "utf-8";
+      this.startTime = new Date().getTime();
+      Object.assign(this, e);
+      this.log("", `🔔${this.name}, 开始!`);
+    }
+    getEnv() {
+      return "undefined" != typeof $environment && $environment["surge-version"] ? "Surge" : "undefined" != typeof $environment && $environment["stash-version"] ? "Stash" : "undefined" != typeof module && module.exports ? "Node.js" : "undefined" != typeof $task ? "Quantumult X" : "undefined" != typeof $loon ? "Loon" : "undefined" != typeof $rocket ? "Shadowrocket" : void 0;
+    }
+    isNode() {
+      return "Node.js" === this.getEnv();
+    }
+    isQuanX() {
+      return "Quantumult X" === this.getEnv();
+    }
+    isSurge() {
+      return "Surge" === this.getEnv();
+    }
+    isLoon() {
+      return "Loon" === this.getEnv();
+    }
+    isShadowrocket() {
+      return "Shadowrocket" === this.getEnv();
+    }
+    isStash() {
+      return "Stash" === this.getEnv();
+    }
+    toObj(t, e = null) {
+      try {
+        return JSON.parse(t);
+      } catch {
+        return e;
+      }
+    }
+    toStr(t, e = null, ...s) {
+      try {
+        return JSON.stringify(t, ...s);
+      } catch {
+        return e;
+      }
+    }
+    getjson(t, e) {
+      let s = e;
+      if (this.getdata(t)) {
+        try {
+          s = JSON.parse(this.getdata(t));
+        } catch {}
+      }
+      return s;
+    }
+    setjson(t, e) {
+      try {
+        return this.setdata(JSON.stringify(t), e);
+      } catch {
+        return !1;
+      }
+    }
+    getScript(t) {
+      return new Promise(e => {
+        this.get({
+          url: t
+        }, (t, s, i) => e(i));
+      });
+    }
+    runScript(t, e) {
+      return new Promise(s => {
+        let i = this.getdata("@chavy_boxjs_userCfgs.httpapi");
+        i = i ? i.replace(/\n/g, "").trim() : i;
+        let o = this.getdata("@chavy_boxjs_userCfgs.httpapi_timeout");
+        o = o ? 1 * o : 20;
+        o = e && e.timeout ? e.timeout : o;
+        const [r, a] = i.split("@"),
+          n = {
+            url: `http://${a}/v1/scripting/evaluate`,
+            body: {
+              script_text: t,
+              mock_type: "cron",
+              timeout: o
+            },
+            headers: {
+              "X-Key": r,
+              Accept: "*/*"
+            },
+            timeout: o
+          };
+        this.post(n, (t, e, i) => s(i));
+      }).catch(t => this.logErr(t));
+    }
+    loaddata() {
+      if (!this.isNode()) {
+        return {};
+      }
+      {
+        this.fs = this.fs ? this.fs : require("fs");
+        this.path = this.path ? this.path : require("path");
+        const t = this.path.resolve(this.dataFile),
+          e = this.path.resolve(process.cwd(), this.dataFile),
+          s = this.fs.existsSync(t),
+          i = !s && this.fs.existsSync(e);
+        if (!s && !i) {
+          return {};
+        }
+        {
+          const i = s ? t : e;
+          try {
+            return JSON.parse(this.fs.readFileSync(i));
+          } catch (t) {
+            return {};
+          }
+        }
+      }
+    }
+    writedata() {
+      if (this.isNode()) {
+        this.fs = this.fs ? this.fs : require("fs");
+        this.path = this.path ? this.path : require("path");
+        const t = this.path.resolve(this.dataFile),
+          e = this.path.resolve(process.cwd(), this.dataFile),
+          s = this.fs.existsSync(t),
+          i = !s && this.fs.existsSync(e),
+          o = JSON.stringify(this.data);
+        s ? this.fs.writeFileSync(t, o) : i ? this.fs.writeFileSync(e, o) : this.fs.writeFileSync(t, o);
+      }
+    }
+    lodash_get(t, e, s) {
+      const i = e.replace(/\[(\d+)\]/g, ".$1").split(".");
+      let o = t;
+      for (const t of i) if (o = Object(o)[t], void 0 === o) {
+        return s;
+      }
+      return o;
+    }
+    lodash_set(t, e, s) {
+      Object(t) !== t || (Array.isArray(e) || (e = e.toString().match(/[^.[\]]+/g) || []), e.slice(0, -1).reduce((t, s, i) => Object(t[s]) === t[s] ? t[s] : t[s] = Math.abs(e[i + 1]) >> 0 == +e[i + 1] ? [] : {}, t)[e[e.length - 1]] = s);
+      return t;
+    }
+    getdata(t) {
+      let e = this.getval(t);
+      if (/^@/.test(t)) {
+        const [, s, i] = /^@(.*?)\.(.*?)$/.exec(t),
+          o = s ? this.getval(s) : "";
+        if (o) {
+          try {
+            const t = JSON.parse(o);
+            e = t ? this.lodash_get(t, i, "") : e;
+          } catch (t) {
+            e = "";
+          }
+        }
+      }
+      return e;
+    }
+    setdata(t, e) {
+      let s = !1;
+      if (/^@/.test(e)) {
+        const [, i, o] = /^@(.*?)\.(.*?)$/.exec(e),
+          r = this.getval(i),
+          a = i ? "null" === r ? null : r || "{}" : "{}";
+        try {
+          const e = JSON.parse(a);
+          this.lodash_set(e, o, t);
+          s = this.setval(JSON.stringify(e), i);
+        } catch (e) {
+          const r = {};
+          this.lodash_set(r, o, t);
+          s = this.setval(JSON.stringify(r), i);
+        }
+      } else {
+        s = this.setval(t, e);
+      }
+      return s;
+    }
+    getval(t) {
+      switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+          return $persistentStore.read(t);
+        case "Quantumult X":
+          return $prefs.valueForKey(t);
+        case "Node.js":
+          this.data = this.loaddata();
+          return this.data[t];
+        default:
+          return this.data && this.data[t] || null;
+      }
+    }
+    setval(t, e) {
+      switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+          return $persistentStore.write(t, e);
+        case "Quantumult X":
+          return $prefs.setValueForKey(t, e);
+        case "Node.js":
+          this.data = this.loaddata();
+          this.data[e] = t;
+          this.writedata();
+          return !0;
+        default:
+          return this.data && this.data[e] || null;
+      }
+    }
+    initGotEnv(t) {
+      this.got = this.got ? this.got : require("got");
+      this.cktough = this.cktough ? this.cktough : require("tough-cookie");
+      this.ckjar = this.ckjar ? this.ckjar : new this.cktough.CookieJar();
+      t && (t.headers = t.headers ? t.headers : {}, t && (t.headers = t.headers ? t.headers : {}, void 0 === t.headers.cookie && void 0 === t.headers.Cookie && void 0 === t.cookieJar && (t.cookieJar = this.ckjar)));
+    }
+    get(t, e = () => {}) {
+      switch (t.headers && (delete t.headers["Content-Type"], delete t.headers["Content-Length"], delete t.headers["content-type"], delete t.headers["content-length"]), t.params && (t.url += "?" + this.queryStr(t.params)), void 0 === t.followRedirect || t.followRedirect || ((this.isSurge() || this.isLoon()) && (t["auto-redirect"] = !1), this.isQuanX() && (t.opts ? t.opts.redirection = !1 : t.opts = {
+        redirection: !1
+      })), this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        default:
+          this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, {
+            "X-Surge-Skip-Scripting": !1
+          }));
+          $httpClient.get(t, (t, s, i) => {
+            !t && s && (s.body = i, s.statusCode = s.status ? s.status : s.statusCode, s.status = s.statusCode);
+            e(t, s, i);
+          });
+          break;
+        case "Quantumult X":
+          this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, {
+            hints: !1
+          }));
+          $task.fetch(t).then(t => {
+            const {
+              statusCode: s,
+              statusCode: i,
+              headers: o,
+              body: r,
+              bodyBytes: a
+            } = t;
+            e(null, {
+              status: s,
+              statusCode: i,
+              headers: o,
+              body: r,
+              bodyBytes: a
+            }, r, a);
+          }, t => e(t && t.error || "UndefinedError"));
+          break;
+        case "Node.js":
+          let s = require("iconv-lite");
+          this.initGotEnv(t);
+          this.got(t).on("redirect", (t, e) => {
+            try {
+              if (t.headers["set-cookie"]) {
+                const s = t.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();
+                s && this.ckjar.setCookieSync(s, null);
+                e.cookieJar = this.ckjar;
+              }
+            } catch (t) {
+              this.logErr(t);
+            }
+          }).then(t => {
+            const {
+                statusCode: i,
+                statusCode: o,
+                headers: r,
+                rawBody: a
+              } = t,
+              n = s.decode(a, this.encoding);
+            e(null, {
+              status: i,
+              statusCode: o,
+              headers: r,
+              rawBody: a,
+              body: n
+            }, n);
+          }, t => {
+            const {
+              message: i,
+              response: o
+            } = t;
+            e(i, o, o && s.decode(o.rawBody, this.encoding));
+          });
+          break;
+      }
+    }
+    post(t, e = () => {}) {
+      const s = t.method ? t.method.toLocaleLowerCase() : "post";
+      switch (t.body && t.headers && !t.headers["Content-Type"] && !t.headers["content-type"] && (t.headers["content-type"] = "application/x-www-form-urlencoded"), t.headers && (delete t.headers["Content-Length"], delete t.headers["content-length"]), void 0 === t.followRedirect || t.followRedirect || ((this.isSurge() || this.isLoon()) && (t["auto-redirect"] = !1), this.isQuanX() && (t.opts ? t.opts.redirection = !1 : t.opts = {
+        redirection: !1
+      })), this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        default:
+          this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, {
+            "X-Surge-Skip-Scripting": !1
+          }));
+          $httpClient[s](t, (t, s, i) => {
+            !t && s && (s.body = i, s.statusCode = s.status ? s.status : s.statusCode, s.status = s.statusCode);
+            e(t, s, i);
+          });
+          break;
+        case "Quantumult X":
+          t.method = s;
+          this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, {
+            hints: !1
+          }));
+          $task.fetch(t).then(t => {
+            const {
+              statusCode: s,
+              statusCode: i,
+              headers: o,
+              body: r,
+              bodyBytes: a
+            } = t;
+            e(null, {
+              status: s,
+              statusCode: i,
+              headers: o,
+              body: r,
+              bodyBytes: a
+            }, r, a);
+          }, t => e(t && t.error || "UndefinedError"));
+          break;
+        case "Node.js":
+          let i = require("iconv-lite");
+          this.initGotEnv(t);
+          const {
+            url: o,
+            ...r
+          } = t;
+          this.got[s](o, r).then(t => {
+            const {
+                statusCode: s,
+                statusCode: o,
+                headers: r,
+                rawBody: a
+              } = t,
+              n = i.decode(a, this.encoding);
+            e(null, {
+              status: s,
+              statusCode: o,
+              headers: r,
+              rawBody: a,
+              body: n
+            }, n);
+          }, t => {
+            const {
+              message: s,
+              response: o
+            } = t;
+            e(s, o, o && i.decode(o.rawBody, this.encoding));
+          });
+          break;
+      }
+    }
+    time(t, e = null) {
+      const s = e ? new Date(e) : new Date();
+      let i = {
+        "M+": s.getMonth() + 1,
+        "d+": s.getDate(),
+        "H+": s.getHours(),
+        "m+": s.getMinutes(),
+        "s+": s.getSeconds(),
+        "q+": Math.floor((s.getMonth() + 3) / 3),
+        S: s.getMilliseconds()
+      };
+      /(y+)/.test(t) && (t = t.replace(RegExp.$1, (s.getFullYear() + "").substr(4 - RegExp.$1.length)));
+      for (let e in i) new RegExp("(" + e + ")").test(t) && (t = t.replace(RegExp.$1, 1 == RegExp.$1.length ? i[e] : ("00" + i[e]).substr(("" + i[e]).length)));
+      return t;
+    }
+    queryStr(t) {
+      let e = "";
+      for (const s in t) {
+        let i = t[s];
+        null != i && "" !== i && ("object" == typeof i && (i = JSON.stringify(i)), e += `${s}=${i}&`);
+      }
+      e = e.substring(0, e.length - 1);
+      return e;
+    }
+    msg(e = t, s = "", i = "", o = {}) {
+      const r = t => {
+        const {
+          $open: e,
+          $copy: s,
+          $media: i,
+          $mediaMime: o
+        } = t;
+        switch (typeof t) {
+          case void 0:
+            return t;
+          case "string":
+            switch (this.getEnv()) {
+              case "Surge":
+              case "Stash":
+              default:
+                return {
+                  url: t
+                };
+              case "Loon":
+              case "Shadowrocket":
+                return t;
+              case "Quantumult X":
+                return {
+                  "open-url": t
+                };
+              case "Node.js":
+                return;
+            }
+          case "object":
+            switch (this.getEnv()) {
+              case "Surge":
+              case "Stash":
+              case "Shadowrocket":
+              default:
+                {
+                  const r = {};
+                  let a = t.openUrl || t.url || t["open-url"] || e;
+                  a && Object.assign(r, {
+                    action: "open-url",
+                    url: a
+                  });
+                  let n = t["update-pasteboard"] || t.updatePasteboard || s;
+                  if (n && Object.assign(r, {
+                    action: "clipboard",
+                    text: n
+                  }), i) {
+                    let t, e, s;
+                    if (i.startsWith("http")) {
+                      t = i;
+                    } else {
+                      if (i.startsWith("data:")) {
+                        const [t] = i.split(";"),
+                          [, o] = i.split(",");
+                        e = o;
+                        s = t.replace("data:", "");
+                      } else {
+                        e = i;
+                        s = (t => {
+                          const e = {
+                            JVBERi0: "application/pdf",
+                            R0lGODdh: "image/gif",
+                            R0lGODlh: "image/gif",
+                            iVBORw0KGgo: "image/png",
+                            "/9j/": "image/jpg"
+                          };
+                          for (var s in e) if (0 === t.indexOf(s)) {
+                            return e[s];
+                          }
+                          return null;
+                        })(i);
+                      }
+                    }
+                    Object.assign(r, {
+                      "media-url": t,
+                      "media-base64": e,
+                      "media-base64-mime": o ?? s
+                    });
+                  }
+                  Object.assign(r, {
+                    "auto-dismiss": t["auto-dismiss"],
+                    sound: t.sound
+                  });
+                  return r;
+                }
+              case "Loon":
+                {
+                  const s = {};
+                  let o = t.openUrl || t.url || t["open-url"] || e;
+                  o && Object.assign(s, {
+                    openUrl: o
+                  });
+                  let r = t.mediaUrl || t["media-url"];
+                  i?.startsWith("http") && (r = i);
+                  r && Object.assign(s, {
+                    mediaUrl: r
+                  });
+                  console.log(JSON.stringify(s));
+                  return s;
+                }
+              case "Quantumult X":
+                {
+                  const o = {};
+                  let r = t["open-url"] || t.url || t.openUrl || e;
+                  r && Object.assign(o, {
+                    "open-url": r
+                  });
+                  let a = t["media-url"] || t.mediaUrl;
+                  i?.startsWith("http") && (a = i);
+                  a && Object.assign(o, {
+                    "media-url": a
+                  });
+                  let n = t["update-pasteboard"] || t.updatePasteboard || s;
+                  n && Object.assign(o, {
+                    "update-pasteboard": n
+                  });
+                  console.log(JSON.stringify(o));
+                  return o;
+                }
+              case "Node.js":
+                return;
+            }
+          default:
+            return;
+        }
+      };
+      if (!this.isMute) {
+        switch (this.getEnv()) {
+          case "Surge":
+          case "Loon":
+          case "Stash":
+          case "Shadowrocket":
+          default:
+            $notification.post(e, s, i, r(o));
+            break;
+          case "Quantumult X":
+            $notify(e, s, i, r(o));
+            break;
+          case "Node.js":
+            break;
+        }
+      }
+      if (!this.isMuteLog) {
+        let t = ["", "==============📣系统通知📣=============="];
+        t.push(e);
+        s && t.push(s);
+        i && t.push(i);
+        console.log(t.join("\n"));
+        this.logs = this.logs.concat(t);
+      }
+    }
+    debug(...t) {
+      this.logLevels[this.logLevel] <= this.logLevels.debug && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.debug}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    }
+    info(...t) {
+      this.logLevels[this.logLevel] <= this.logLevels.info && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.info}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    }
+    warn(...t) {
+      this.logLevels[this.logLevel] <= this.logLevels.warn && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.warn}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    }
+    error(...t) {
+      this.logLevels[this.logLevel] <= this.logLevels.error && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.error}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    }
+    log(...t) {
+      t.length > 0 && (this.logs = [...this.logs, ...t]);
+      console.log(t.map(t => t ?? String(t)).join(this.logSeparator));
+    }
+    logErr(t, e) {
+      switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        case "Quantumult X":
+        default:
+          this.log("", `❗️${this.name}, 错误!`, e, t);
+          break;
+        case "Node.js":
+          this.log("", `❗️${this.name}, 错误!`, e, void 0 !== t.message ? t.message : t, t.stack);
+          break;
+      }
+    }
+    wait(t) {
+      return new Promise(e => setTimeout(e, t));
+    }
+    done(t = {}) {
+      const e = (new Date().getTime() - this.startTime) / 1000;
+      switch (this.log("", `🔔${this.name}, 结束! 🕛 ${e} 秒`), this.log(), this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        case "Quantumult X":
+        default:
+          $done(t);
+          break;
+        case "Node.js":
+          process.exit(1);
+      }
+    }
+  }(t, e);
+}
